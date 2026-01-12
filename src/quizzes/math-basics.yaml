@@ -1,7 +1,7 @@
 title: Math Basics
 slug: math-basics
 description: Practice basic arithmetic and math concepts
-shuffle: false
+noShuffle: true
 questions:
   - id: 1
     question: What is 2 + 2?

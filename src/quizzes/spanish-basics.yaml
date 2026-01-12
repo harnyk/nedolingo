@@ -1,7 +1,7 @@
 title: Spanish Basics
 slug: spanish-basics
 description: Learn basic Spanish words and phrases
-shuffle: false
+noShuffle: true
 questions:
   - id: 1
     question: "Translate 'Hello' to Spanish"

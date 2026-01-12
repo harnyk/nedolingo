@@ -21,18 +21,34 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
     }
   }, [completedExercises.length, showSummary, onDirtyStateChange]);
 
-  // Shuffle questions if quiz.shuffle is true
+  // Shuffle questions and options by default (unless noShuffle is true)
   const exercises = useMemo(() => {
-    if (quiz.shuffle) {
-      const shuffled = [...quiz.questions];
+    const shuffleArray = (array) => {
+      const shuffled = [...array];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
       return shuffled;
-    }
-    return quiz.questions;
-  }, [quiz.questions, quiz.shuffle]);
+    };
+
+    // Shuffle questions unless noShuffle is set at quiz level
+    let questions = quiz.noShuffle ? quiz.questions : shuffleArray(quiz.questions);
+
+    // Shuffle options for each multiple-choice question unless noShuffle is set
+    questions = questions.map(question => {
+      if (question.type === 'multiple-choice' && question.options) {
+        const shouldShuffle = !quiz.noShuffle && !question.noShuffle;
+        return {
+          ...question,
+          options: shouldShuffle ? shuffleArray(question.options) : question.options
+        };
+      }
+      return question;
+    });
+
+    return questions;
+  }, [quiz.questions, quiz.noShuffle]);
   const currentExercise = exercises[currentExerciseIndex];
 
   const normalizeAnswer = (answer) => {
