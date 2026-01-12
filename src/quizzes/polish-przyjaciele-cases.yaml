@@ -1,0 +1,91 @@
+title: Склонения слова "przyjaciele" (множественное число)
+slug: polish-przyjaciele-cases
+description: Изучите склонения слова "przyjaciele" в польском языке - чередования o/ó, l/ł, родовые окончания и типичные ошибки
+questions:
+  # Narzędnik
+  - id: 1
+    question: "Często podróżuję z moimi ________."
+    type: multiple-choice
+    options:
+      - "przyjaciółmi"
+      - "przyjaciołami"
+      - "przyjacielami"
+      - "przyjaciółami"
+    correctAnswer: "przyjaciółmi"
+
+  # Dopełniacz
+  - id: 2
+    question: "Nie widzę tutaj moich ________."
+    type: multiple-choice
+    options:
+      - "przyjaciół"
+      - "przyjacioł"
+      - "przyjacieli"
+      - "przyjaciółów"
+    correctAnswer: "przyjaciół"
+
+  # Mianownik
+  - id: 3
+    question: "To są moi najlepsi ________."
+    type: multiple-choice
+    options:
+      - "przyjaciele"
+      - "przyjacieli"
+      - "przyjacielowie"
+      - "przyjacielie"
+    correctAnswer: "przyjaciele"
+
+  # Celownik
+  - id: 4
+    question: "Zawsze pomagam moim ________."
+    type: multiple-choice
+    options:
+      - "przyjaciołom"
+      - "przyjaciółom"
+      - "przyjacielom"
+      - "przyjaciołami"
+    correctAnswer: "przyjaciołom"
+
+  # Miejscownik
+  - id: 5
+    question: "Często opowiadam mamie o moich ________."
+    type: multiple-choice
+    options:
+      - "przyjaciołach"
+      - "przyjaciółach"
+      - "przyjacielach"
+      - "przyjaciołech"
+    correctAnswer: "przyjaciołach"
+
+  # Biernik
+  - id: 6
+    question: "Zaprosiłem na urodziny wszystkich moich ________."
+    type: multiple-choice
+    options:
+      - "przyjaciół"
+      - "przyjaciele"
+      - "przyjaciółów"
+      - "przyjacioły"
+    correctAnswer: "przyjaciół"
+
+  # Narzędnik
+  - id: 7
+    question: "Lubię spędzać czas między ________."
+    type: multiple-choice
+    options:
+      - "przyjaciółmi"
+      - "przyjacielami"
+      - "przyjaciółamy"
+      - "przyjaciołmi"
+    correctAnswer: "przyjaciółmi"
+
+  # Dopełniacz
+  - id: 8
+    question: "Mamy wspólnych ________."
+    type: multiple-choice
+    options:
+      - "przyjaciół"
+      - "przyjacielów"
+      - "przyjacioły"
+      - "przyjacieli"
+    correctAnswer: "przyjaciół"
