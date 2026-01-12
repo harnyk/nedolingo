@@ -1,0 +1,48 @@
+title: Art History
+slug: art-history
+description: Explore famous artists and their masterpieces
+questions:
+  - id: 1
+    question: Who painted the Mona Lisa?
+    type: multiple-choice
+    options:
+      - Vincent van Gogh
+      - Pablo Picasso
+      - Leonardo da Vinci
+      - Michelangelo
+    correctAnswer: Leonardo da Vinci
+
+  - id: 2
+    question: Which artist cut off his own ear?
+    type: multiple-choice
+    options:
+      - Claude Monet
+      - Vincent van Gogh
+      - Salvador Dalí
+      - Edvard Munch
+    correctAnswer: Vincent van Gogh
+
+  - id: 3
+    question: Who painted the ceiling of the Sistine Chapel?
+    type: text-input
+    correctAnswer: Michelangelo
+
+  - id: 4
+    question: Which artist is known for the painting 'The Starry Night'?
+    type: multiple-choice
+    options:
+      - Paul Cézanne
+      - Vincent van Gogh
+      - Claude Monet
+      - Pierre-Auguste Renoir
+    correctAnswer: Vincent van Gogh
+
+  - id: 5
+    question: What art movement did Pablo Picasso co-found?
+    type: multiple-choice
+    options:
+      - Impressionism
+      - Surrealism
+      - Cubism
+      - Expressionism
+    correctAnswer: Cubism

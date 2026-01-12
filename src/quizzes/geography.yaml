@@ -1,0 +1,48 @@
+title: World Geography Quiz
+slug: geography
+description: Test your knowledge of world geography, capitals, and landmarks
+questions:
+  - id: 1
+    question: What is the capital of France?
+    type: multiple-choice
+    options:
+      - London
+      - Berlin
+      - Paris
+      - Madrid
+    correctAnswer: Paris
+
+  - id: 2
+    question: Which planet is known as the Red Planet?
+    type: multiple-choice
+    options:
+      - Venus
+      - Mars
+      - Jupiter
+      - Saturn
+    correctAnswer: Mars
+
+  - id: 3
+    question: What is the largest ocean on Earth?
+    type: multiple-choice
+    options:
+      - Atlantic Ocean
+      - Indian Ocean
+      - Arctic Ocean
+      - Pacific Ocean
+    correctAnswer: Pacific Ocean
+
+  - id: 4
+    question: In which country would you find the Great Barrier Reef?
+    type: multiple-choice
+    options:
+      - Brazil
+      - Australia
+      - Philippines
+      - Indonesia
+    correctAnswer: Australia
+
+  - id: 5
+    question: What is the capital of Japan?
+    type: text-input
+    correctAnswer: Tokyo

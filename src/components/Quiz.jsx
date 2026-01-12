@@ -1,45 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, RotateCcw, Trophy } from 'lucide-react';
+import { useState } from 'react';
+import { CheckCircle, XCircle, RotateCcw, Trophy, ArrowLeft } from 'lucide-react';
 
-// Mock JSON data for exercises
-const mockExercises = [
-  {
-    id: 1,
-    question: "What is the capital of France?",
-    type: "multiple-choice",
-    options: ["London", "Berlin", "Paris", "Madrid"],
-    correctAnswer: "Paris"
-  },
-  {
-    id: 2,
-    question: "Translate 'Hello' to Spanish",
-    type: "text-input",
-    correctAnswer: "hola"
-  },
-  {
-    id: 3,
-    question: "Which planet is known as the Red Planet?",
-    type: "multiple-choice",
-    options: ["Venus", "Mars", "Jupiter", "Saturn"],
-    correctAnswer: "Mars"
-  },
-  {
-    id: 4,
-    question: "What is 2 + 2?",
-    type: "text-input",
-    correctAnswer: "4"
-  },
-  {
-    id: 5,
-    question: "Who painted the Mona Lisa?",
-    type: "multiple-choice",
-    options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
-    correctAnswer: "Leonardo da Vinci"
-  }
-];
-
-export default function App() {
-  const [exercises] = useState(mockExercises);
+export default function Quiz({ quiz, onBack }) {
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
   const [textInput, setTextInput] = useState('');
@@ -49,6 +11,7 @@ export default function App() {
   const [completedExercises, setCompletedExercises] = useState([]);
   const [showSummary, setShowSummary] = useState(false);
 
+  const exercises = quiz.questions;
   const currentExercise = exercises[currentExerciseIndex];
 
   const normalizeAnswer = (answer) => {
@@ -83,7 +46,6 @@ export default function App() {
       }
     ]);
 
-    // Reset inputs
     setSelectedOption('');
     setTextInput('');
   };
@@ -114,7 +76,7 @@ export default function App() {
 
   if (showSummary) {
     const incorrectExercises = completedExercises.filter(ex => !ex.isCorrect);
-    
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl w-full">
@@ -147,13 +109,22 @@ export default function App() {
             </div>
           )}
 
-          <button
-            onClick={resetQuiz}
-            className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center gap-2"
-          >
-            <RotateCcw className="w-5 h-5" />
-            Try Again
-          </button>
+          <div className="flex gap-3">
+            <button
+              onClick={onBack}
+              className="flex-1 bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 transition-all duration-200 flex items-center justify-center gap-2"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              Back to Quizzes
+            </button>
+            <button
+              onClick={resetQuiz}
+              className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center gap-2"
+            >
+              <RotateCcw className="w-5 h-5" />
+              Try Again
+            </button>
+          </div>
         </div>
       </div>
     );
@@ -162,6 +133,18 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl w-full">
+        {/* Header */}
+        <div className="mb-6">
+          <button
+            onClick={onBack}
+            className="text-gray-600 hover:text-gray-800 flex items-center gap-2 mb-4 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Back to Quizzes
+          </button>
+          <h2 className="text-2xl font-bold text-gray-800">{quiz.title}</h2>
+        </div>
+
         {/* Progress Bar */}
         <div className="mb-6">
           <div className="flex justify-between text-sm text-gray-600 mb-2">
@@ -240,8 +223,8 @@ export default function App() {
           <button
             onClick={checkAnswer}
             disabled={
-              currentExercise.type === 'multiple-choice' 
-                ? !selectedOption 
+              currentExercise.type === 'multiple-choice'
+                ? !selectedOption
                 : !textInput.trim()
             }
             className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"

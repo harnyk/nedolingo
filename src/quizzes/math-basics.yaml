@@ -1,0 +1,43 @@
+title: Math Basics
+slug: math-basics
+description: Practice basic arithmetic and math concepts
+questions:
+  - id: 1
+    question: What is 2 + 2?
+    type: text-input
+    correctAnswer: "4"
+
+  - id: 2
+    question: What is 7 × 8?
+    type: multiple-choice
+    options:
+      - "54"
+      - "56"
+      - "58"
+      - "64"
+    correctAnswer: "56"
+
+  - id: 3
+    question: What is 100 ÷ 5?
+    type: text-input
+    correctAnswer: "20"
+
+  - id: 4
+    question: What is the square root of 144?
+    type: multiple-choice
+    options:
+      - "10"
+      - "11"
+      - "12"
+      - "14"
+    correctAnswer: "12"
+
+  - id: 5
+    question: What is 15% of 200?
+    type: multiple-choice
+    options:
+      - "20"
+      - "25"
+      - "30"
+      - "35"
+    correctAnswer: "30"
