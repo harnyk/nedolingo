@@ -1,0 +1,104 @@
+title: Polish Nationalities
+slug: polish-nationalities
+description: Learn how to say different nationalities in Polish
+shuffle: true
+questions:
+  - id: 1
+    question: "Wybierz poprawną formę słowa dla osoby z Ameryki"
+    type: multiple-choice
+    options:
+      - Amerykanin
+      - Amerykan
+      - Amerika
+      - Amerykaniec
+    correctAnswer: Amerykanin
+
+  - id: 2
+    question: "Wybierz poprawną formę słowa dla osoby z Francji"
+    type: multiple-choice
+    options:
+      - Francuz
+      - Francuzin
+      - Francia
+      - Francec
+    correctAnswer: Francuz
+
+  - id: 3
+    question: "Wybierz poprawną formę słowa dla osoby z Niemiec"
+    type: multiple-choice
+    options:
+      - Niemiec
+      - Niemiecki
+      - Niemczyk
+      - Germania
+    correctAnswer: Niemiec
+
+  - id: 4
+    question: "Wybierz poprawną formę słowa dla osoby z Rosji"
+    type: multiple-choice
+    options:
+      - Rosjanin
+      - Rosyjczyk
+      - Rosjec
+      - Rusek
+    correctAnswer: Rosjanin
+
+  - id: 5
+    question: "Wybierz poprawną formę słowa dla osoby z Włoch"
+    type: multiple-choice
+    options:
+      - Włoch
+      - Włoszyk
+      - Włoski
+      - Italia
+    correctAnswer: Włoch
+
+  - id: 6
+    question: "Wybierz poprawną formę słowa dla osoby z Anglii"
+    type: multiple-choice
+    options:
+      - Anglik
+      - Angliec
+      - Angielczyk
+      - England
+    correctAnswer: Anglik
+
+  - id: 7
+    question: "Wybierz poprawną formę słowa dla osoby z Hiszpanii"
+    type: multiple-choice
+    options:
+      - Hiszpan
+      - Hiszpaniec
+      - Hiszpańczyk
+      - Espana
+    correctAnswer: Hiszpan
+
+  - id: 8
+    question: "Wybierz poprawną formę słowa dla osoby z Chin"
+    type: multiple-choice
+    options:
+      - Chińczyk
+      - Chiniec
+      - Chinan
+      - China
+    correctAnswer: Chińczyk
+
+  - id: 9
+    question: "Wybierz poprawną formę słowa dla osoby z Japonii"
+    type: multiple-choice
+    options:
+      - Japończyk
+      - Japoniec
+      - Japanin
+      - Japoński
+    correctAnswer: Japończyk
+
+  - id: 10
+    question: "Wybierz poprawną formę słowa dla osoby z Portugalii"
+    type: multiple-choice
+    options:
+      - Portugalczyk
+      - Portugalec
+      - Portugal
+      - Portugalin
+    correctAnswer: Portugalczyk
