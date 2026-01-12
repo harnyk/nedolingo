@@ -1,3 +1,7 @@
+---
+allowed-tools: Bash(git:*), Bash(nr:*)
+---
+
 Stage changes, commit, push and deploy.
 Do it in a single bash command.
 
