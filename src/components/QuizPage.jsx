@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 import { quizzesMap } from '../quizzes';
-import Quiz from './Quiz';
+import Quiz from './Quiz/Quiz';
 
 export default function QuizPage() {
   const { slug } = useParams();
