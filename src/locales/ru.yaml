@@ -1,0 +1,31 @@
+app:
+  title: Nedolingo
+  tagline: Выберите тест для начала
+
+quiz_list:
+  questions: вопросов
+
+quiz:
+  back_to_quizzes: Назад к тестам
+  question_progress: Вопрос {current} из {total}
+  type_answer: Введите ваш ответ...
+  check_answer: Проверить ответ
+  next_question: Следующий вопрос
+  view_results: Посмотреть результаты
+  correct: Правильно!
+  incorrect: Неправильно!
+  correct_answer_is: "Правильный ответ:"
+
+results:
+  title: Тест завершён!
+  score: Результат
+  review_incorrect: Просмотр неправильных ответов
+  your_answer: "Ваш ответ:"
+  correct_answer: "Правильный ответ:"
+  try_again: Попробовать снова
+  back_to_quizzes: Назад к тестам
+  no_answer: Нет ответа
+
+language:
+  en: English
+  ru: Русский

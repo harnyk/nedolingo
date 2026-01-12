@@ -1,7 +1,10 @@
 import { BookOpen, ArrowRight } from 'lucide-react';
 import quizzes from '../quizzes';
+import { useI18n } from '../contexts/I18nContext';
 
 export default function QuizList({ onSelectQuiz }) {
+  const { t } = useI18n();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
       <div className="max-w-4xl w-full">
@@ -9,8 +12,8 @@ export default function QuizList({ onSelectQuiz }) {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-6">
             <BookOpen className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-800 mb-3">Nedolingo</h1>
-          <p className="text-xl text-gray-600">Choose a quiz to get started</p>
+          <h1 className="text-4xl font-bold text-gray-800 mb-3">{t('app.title')}</h1>
+          <p className="text-xl text-gray-600">{t('app.tagline')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -27,7 +30,7 @@ export default function QuizList({ onSelectQuiz }) {
                   </h2>
                   <p className="text-gray-600 mb-4">{quiz.description}</p>
                   <div className="flex items-center text-sm text-gray-500">
-                    <span>{quiz.questions.length} questions</span>
+                    <span>{quiz.questions.length} {t('quiz_list.questions')}</span>
                   </div>
                 </div>
                 <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" />

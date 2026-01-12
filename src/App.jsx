@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import QuizList from './components/QuizList';
 import Quiz from './components/Quiz';
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 export default function App() {
   const [selectedQuiz, setSelectedQuiz] = useState(null);
@@ -13,9 +14,14 @@ export default function App() {
     setSelectedQuiz(null);
   };
 
-  if (selectedQuiz) {
-    return <Quiz quiz={selectedQuiz} onBack={handleBackToList} />;
-  }
-
-  return <QuizList onSelectQuiz={handleSelectQuiz} />;
+  return (
+    <>
+      <LanguageSwitcher />
+      {selectedQuiz ? (
+        <Quiz quiz={selectedQuiz} onBack={handleBackToList} />
+      ) : (
+        <QuizList onSelectQuiz={handleSelectQuiz} />
+      )}
+    </>
+  );
 }

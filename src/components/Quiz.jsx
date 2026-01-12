@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { CheckCircle, XCircle, RotateCcw, Trophy, ArrowLeft } from 'lucide-react';
+import { useI18n } from '../contexts/I18nContext';
 
 export default function Quiz({ quiz, onBack }) {
+  const { t } = useI18n();
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
   const [textInput, setTextInput] = useState('');
@@ -84,24 +86,24 @@ export default function Quiz({ quiz, onBack }) {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mb-4">
               <Trophy className="w-10 h-10 text-white" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-800 mb-2">Quiz Complete!</h1>
+            <h1 className="text-3xl font-bold text-gray-800 mb-2">{t('results.title')}</h1>
             <p className="text-xl text-gray-600">
-              Score: <span className="font-bold text-green-600">{score}</span>/{exercises.length}
+              {t('results.score')}: <span className="font-bold text-green-600">{score}</span>/{exercises.length}
             </p>
           </div>
 
           {incorrectExercises.length > 0 && (
             <div className="mb-8">
-              <h2 className="text-xl font-semibold text-gray-800 mb-4">Review Incorrect Answers</h2>
+              <h2 className="text-xl font-semibold text-gray-800 mb-4">{t('results.review_incorrect')}</h2>
               <div className="space-y-4">
                 {incorrectExercises.map((exercise, index) => (
                   <div key={index} className="border border-red-200 rounded-lg p-4 bg-red-50">
                     <p className="font-medium text-gray-800 mb-2">{exercise.question}</p>
                     <p className="text-sm text-gray-600 mb-1">
-                      Your answer: <span className="font-medium">{exercise.userAnswer || 'No answer'}</span>
+                      {t('results.your_answer')} <span className="font-medium">{exercise.userAnswer || t('results.no_answer')}</span>
                     </p>
                     <p className="text-sm text-green-600 font-medium">
-                      Correct answer: {exercise.correctAnswer}
+                      {t('results.correct_answer')} {exercise.correctAnswer}
                     </p>
                   </div>
                 ))}
@@ -115,14 +117,14 @@ export default function Quiz({ quiz, onBack }) {
               className="flex-1 bg-gray-200 text-gray-800 font-semibold py-3 px-6 rounded-lg hover:bg-gray-300 transition-all duration-200 flex items-center justify-center gap-2"
             >
               <ArrowLeft className="w-5 h-5" />
-              Back to Quizzes
+              {t('results.back_to_quizzes')}
             </button>
             <button
               onClick={resetQuiz}
               className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center gap-2"
             >
               <RotateCcw className="w-5 h-5" />
-              Try Again
+              {t('results.try_again')}
             </button>
           </div>
         </div>
@@ -140,7 +142,7 @@ export default function Quiz({ quiz, onBack }) {
             className="text-gray-600 hover:text-gray-800 flex items-center gap-2 mb-4 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
-            Back to Quizzes
+            {t('quiz.back_to_quizzes')}
           </button>
           <h2 className="text-2xl font-bold text-gray-800">{quiz.title}</h2>
         </div>
@@ -148,7 +150,7 @@ export default function Quiz({ quiz, onBack }) {
         {/* Progress Bar */}
         <div className="mb-6">
           <div className="flex justify-between text-sm text-gray-600 mb-2">
-            <span>Question {currentExerciseIndex + 1} of {exercises.length}</span>
+            <span>{t('quiz.question_progress', { current: currentExerciseIndex + 1, total: exercises.length })}</span>
             <span>{Math.round(getProgressPercentage())}%</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
@@ -189,7 +191,7 @@ export default function Quiz({ quiz, onBack }) {
                 value={textInput}
                 onChange={(e) => setTextInput(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && textInput && checkAnswer()}
-                placeholder="Type your answer..."
+                placeholder={t('quiz.type_answer')}
                 className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
                 autoFocus
               />
@@ -208,11 +210,11 @@ export default function Quiz({ quiz, onBack }) {
             <p className={`text-lg font-semibold mb-2 ${
               isCorrect ? 'text-green-600' : 'text-red-600'
             }`}>
-              {isCorrect ? 'Correct!' : 'Incorrect!'}
+              {isCorrect ? t('quiz.correct') : t('quiz.incorrect')}
             </p>
             {!isCorrect && (
               <p className="text-gray-600">
-                The correct answer is: <span className="font-semibold text-gray-800">{currentExercise.correctAnswer}</span>
+                {t('quiz.correct_answer_is')} <span className="font-semibold text-gray-800">{currentExercise.correctAnswer}</span>
               </p>
             )}
           </div>
@@ -229,14 +231,14 @@ export default function Quiz({ quiz, onBack }) {
             }
             className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Check Answer
+            {t('quiz.check_answer')}
           </button>
         ) : (
           <button
             onClick={handleNext}
             className="w-full bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-200"
           >
-            {currentExerciseIndex < exercises.length - 1 ? 'Next Question' : 'View Results'}
+            {currentExerciseIndex < exercises.length - 1 ? t('quiz.next_question') : t('quiz.view_results')}
           </button>
         )}
       </div>

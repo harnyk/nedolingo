@@ -1,0 +1,31 @@
+app:
+  title: Nedolingo
+  tagline: Choose a quiz to get started
+
+quiz_list:
+  questions: questions
+
+quiz:
+  back_to_quizzes: Back to Quizzes
+  question_progress: Question {current} of {total}
+  type_answer: Type your answer...
+  check_answer: Check Answer
+  next_question: Next Question
+  view_results: View Results
+  correct: Correct!
+  incorrect: Incorrect!
+  correct_answer_is: "The correct answer is:"
+
+results:
+  title: Quiz Complete!
+  score: Score
+  review_incorrect: Review Incorrect Answers
+  your_answer: "Your answer:"
+  correct_answer: "Correct answer:"
+  try_again: Try Again
+  back_to_quizzes: Back to Quizzes
+  no_answer: No answer
+
+language:
+  en: English
+  ru: Русский
