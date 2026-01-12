@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { CheckCircle, XCircle, RotateCcw, Trophy, ArrowLeft } from 'lucide-react';
 import { useI18n } from '../contexts/I18nContext';
 
@@ -13,7 +13,18 @@ export default function Quiz({ quiz, onBack }) {
   const [completedExercises, setCompletedExercises] = useState([]);
   const [showSummary, setShowSummary] = useState(false);
 
-  const exercises = quiz.questions;
+  // Shuffle questions if quiz.shuffle is true
+  const exercises = useMemo(() => {
+    if (quiz.shuffle) {
+      const shuffled = [...quiz.questions];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+    return quiz.questions;
+  }, [quiz.questions, quiz.shuffle]);
   const currentExercise = exercises[currentExerciseIndex];
 
   const normalizeAnswer = (answer) => {

@@ -1,6 +1,7 @@
 title: World Geography Quiz
 slug: geography
 description: Test your knowledge of world geography, capitals, and landmarks
+shuffle: true
 questions:
   - id: 1
     question: What is the capital of France?
