@@ -3,7 +3,7 @@ slug: polish-nationalities
 description: Изучите названия национальностей на польском языке
 questions:
   - id: 1
-    question: "венгр"
+    question: "Венгр"
     type: multiple-choice
     options:
       - "Węgier"
@@ -13,7 +13,7 @@ questions:
     correctAnswer: "Węgier"
 
   - id: 2
-    question: "венгерка"
+    question: "Венгерка"
     type: multiple-choice
     options:
       - "Węgierka"
@@ -23,7 +23,7 @@ questions:
     correctAnswer: "Węgierka"
 
   - id: 3
-    question: "финн"
+    question: "Финн"
     type: multiple-choice
     options:
       - "Fin"
@@ -33,7 +33,7 @@ questions:
     correctAnswer: "Fin"
 
   - id: 4
-    question: "финка"
+    question: "Финка"
     type: multiple-choice
     options:
       - "Finka"
@@ -43,7 +43,7 @@ questions:
     correctAnswer: "Finka"
 
   - id: 5
-    question: "турок"
+    question: "Турок"
     type: multiple-choice
     options:
       - "Turek"
@@ -53,7 +53,7 @@ questions:
     correctAnswer: "Turek"
 
   - id: 6
-    question: "турчанка"
+    question: "Турчанка"
     type: multiple-choice
     options:
       - "Turczynka"
@@ -63,7 +63,7 @@ questions:
     correctAnswer: "Turczynka"
 
   - id: 7
-    question: "китаец"
+    question: "Китаец"
     type: multiple-choice
     options:
       - "Chińczyk"
@@ -73,7 +73,7 @@ questions:
     correctAnswer: "Chińczyk"
 
   - id: 8
-    question: "китаянка"
+    question: "Китаянка"
     type: multiple-choice
     options:
       - "Chinka"
@@ -83,7 +83,7 @@ questions:
     correctAnswer: "Chinka"
 
   - id: 9
-    question: "таиландец"
+    question: "Таиландец"
     type: multiple-choice
     options:
       - "Taj"
@@ -93,7 +93,7 @@ questions:
     correctAnswer: "Taj"
 
   - id: 10
-    question: "таиландка"
+    question: "Таиландка"
     type: multiple-choice
     options:
       - "Tajka"
@@ -103,7 +103,7 @@ questions:
     correctAnswer: "Tajka"
 
   - id: 11
-    question: "израильтянин (гражданин Израиля)"
+    question: "Израильтянин (гражданин Израиля)"
     type: multiple-choice
     options:
       - "Izraelczyk"
@@ -113,7 +113,7 @@ questions:
     correctAnswer: "Izraelczyk"
 
   - id: 12
-    question: "израильтянка"
+    question: "Израильтянка"
     type: multiple-choice
     options:
       - "Izraelka"
@@ -123,7 +123,7 @@ questions:
     correctAnswer: "Izraelka"
 
   - id: 13
-    question: "еврей (национальность)"
+    question: "Еврей (национальность)"
     type: multiple-choice
     options:
       - "Żyd"
@@ -133,7 +133,7 @@ questions:
     correctAnswer: "Żyd"
 
   - id: 14
-    question: "еврейка"
+    question: "Еврейка"
     type: multiple-choice
     options:
       - "Żydówka"
@@ -143,7 +143,7 @@ questions:
     correctAnswer: "Żydówka"
 
   - id: 15
-    question: "голландец"
+    question: "Голландец"
     type: multiple-choice
     options:
       - "Holender"
@@ -153,7 +153,7 @@ questions:
     correctAnswer: "Holender"
 
   - id: 16
-    question: "голландка"
+    question: "Голландка"
     type: multiple-choice
     options:
       - "Holenderka"
@@ -163,7 +163,7 @@ questions:
     correctAnswer: "Holenderka"
 
   - id: 17
-    question: "украинец"
+    question: "Украинец"
     type: multiple-choice
     options:
       - "Ukrainiec"
@@ -173,7 +173,7 @@ questions:
     correctAnswer: "Ukrainiec"
 
   - id: 18
-    question: "украинка"
+    question: "Украинка"
     type: multiple-choice
     options:
       - "Ukrainka"
@@ -183,7 +183,7 @@ questions:
     correctAnswer: "Ukrainka"
 
   - id: 19
-    question: "датчанин"
+    question: "Датчанин"
     type: multiple-choice
     options:
       - "Duńczyk"
@@ -193,7 +193,7 @@ questions:
     correctAnswer: "Duńczyk"
 
   - id: 20
-    question: "датчанка"
+    question: "Датчанка"
     type: multiple-choice
     options:
       - "Dunka"

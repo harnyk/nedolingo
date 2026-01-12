@@ -1,0 +1,183 @@
+title: Множественное число польских национальностей
+slug: polish-nationalities-plurals
+description: Изучите формы множественного числа национальностей на польском языке (męskoosobowy vs niemęskoosobowy)
+questions:
+  - id: 1
+    question: "Китайцы"
+    type: multiple-choice
+    options:
+      - "Chińczycy"
+      - "Chińczykowie"
+      - "Chińcy"
+      - "Chińczyki"
+    correctAnswer: "Chińczycy"
+
+  - id: 2
+    question: "Китаянки"
+    type: multiple-choice
+    options:
+      - "Chinki"
+      - "Chińczycy"
+      - "Chiny"
+      - "Chińczyczki"
+    correctAnswer: "Chinki"
+
+  - id: 3
+    question: "Итальянцы"
+    type: multiple-choice
+    options:
+      - "Włosi"
+      - "Włochowie"
+      - "Włochy"
+      - "Italianie"
+    correctAnswer: "Włosi"
+
+  - id: 4
+    question: "Итальянки"
+    type: multiple-choice
+    options:
+      - "Włoszki"
+      - "Włoski"
+      - "Włochy"
+      - "Italijki"
+    correctAnswer: "Włoszki"
+
+  - id: 5
+    question: "Американцы"
+    type: multiple-choice
+    options:
+      - "Amerykanie"
+      - "Amerykanowie"
+      - "Amerykany"
+      - "Amerykancy"
+    correctAnswer: "Amerykanie"
+
+  - id: 6
+    question: "Американки"
+    type: multiple-choice
+    options:
+      - "Amerykanki"
+      - "Ameryczki"
+      - "Amerykanowie"
+      - "Ameryczynki"
+    correctAnswer: "Amerykanki"
+
+  - id: 7
+    question: "Немцы"
+    type: multiple-choice
+    options:
+      - "Niemcy"
+      - "Niemiecowie"
+      - "Niemci"
+      - "Niemczycy"
+    correctAnswer: "Niemcy"
+
+  - id: 8
+    question: "Немки"
+    type: multiple-choice
+    options:
+      - "Niemki"
+      - "Niemkinia"
+      - "Germanki"
+      - "Niemeczki"
+    correctAnswer: "Niemki"
+
+  - id: 9
+    question: "Англичане"
+    type: multiple-choice
+    options:
+      - "Anglicy"
+      - "Anglikowie"
+      - "Angliki"
+      - "Angliny"
+    correctAnswer: "Anglicy"
+
+  - id: 10
+    question: "Англичанки"
+    type: multiple-choice
+    options:
+      - "Angielki"
+      - "Angliczki"
+      - "Anglijki"
+      - "Anglinki"
+    correctAnswer: "Angielki"
+
+  - id: 11
+    question: "Финны"
+    type: multiple-choice
+    options:
+      - "Finowie"
+      - "Fini"
+      - "Finy"
+      - "Fińczycy"
+    correctAnswer: "Finowie"
+
+  - id: 12
+    question: "Финки"
+    type: multiple-choice
+    options:
+      - "Finki"
+      - "Finowie"
+      - "Finijki"
+      - "Finlandia"
+    correctAnswer: "Finki"
+
+  - id: 13
+    question: "Евреи"
+    type: multiple-choice
+    options:
+      - "Żydzi"
+      - "Żydowie"
+      - "Żydy"
+      - "Żydzie"
+    correctAnswer: "Żydzi"
+
+  - id: 14
+    question: "Еврейки"
+    type: multiple-choice
+    options:
+      - "Żydówki"
+      - "Żydowki"
+      - "Żydki"
+      - "Żydzie"
+    correctAnswer: "Żydówki"
+
+  - id: 15
+    question: "Турки"
+    type: multiple-choice
+    options:
+      - "Turcy"
+      - "Turkowie"
+      - "Turki"
+      - "Turczanie"
+    correctAnswer: "Turcy"
+
+  - id: 16
+    question: "Турчанки"
+    type: multiple-choice
+    options:
+      - "Turczynki"
+      - "Tureczki"
+      - "Turki"
+      - "Turczanki"
+    correctAnswer: "Turczynki"
+
+  - id: 17
+    question: "Венгры"
+    type: multiple-choice
+    options:
+      - "Węgrzy"
+      - "Węgrowie"
+      - "Węgierowie"
+      - "Węgry"
+    correctAnswer: "Węgrzy"
+
+  - id: 18
+    question: "Венгерки"
+    type: multiple-choice
+    options:
+      - "Węgierki"
+      - "Węgrzanki"
+      - "Węgryjki"
+      - "Węgerki"
+    correctAnswer: "Węgierki"
