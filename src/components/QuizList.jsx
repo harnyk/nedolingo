@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import { BookOpen, ArrowRight } from 'lucide-react';
 import quizzes from '../quizzes';
 import { useI18n } from '../contexts/I18nContext';
 
-export default function QuizList({ onSelectQuiz }) {
+export default function QuizList() {
   const { t } = useI18n();
 
   return (
@@ -18,10 +19,10 @@ export default function QuizList({ onSelectQuiz }) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {quizzes.map((quiz) => (
-            <button
+            <Link
               key={quiz.slug}
-              onClick={() => onSelectQuiz(quiz)}
-              className="bg-white rounded-2xl shadow-lg p-6 text-left hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 group"
+              to={`/q/${quiz.slug}`}
+              className="bg-white rounded-2xl shadow-lg p-6 text-left hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 group block"
             >
               <div className="flex items-start justify-between">
                 <div className="flex-1">
@@ -35,7 +36,7 @@ export default function QuizList({ onSelectQuiz }) {
                 </div>
                 <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" />
               </div>
-            </button>
+            </Link>
           ))}
         </div>
       </div>

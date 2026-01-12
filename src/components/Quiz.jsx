@@ -1,8 +1,8 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { CheckCircle, XCircle, RotateCcw, Trophy, ArrowLeft } from 'lucide-react';
 import { useI18n } from '../contexts/I18nContext';
 
-export default function Quiz({ quiz, onBack }) {
+export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
   const { t } = useI18n();
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
@@ -12,6 +12,14 @@ export default function Quiz({ quiz, onBack }) {
   const [score, setScore] = useState(0);
   const [completedExercises, setCompletedExercises] = useState([]);
   const [showSummary, setShowSummary] = useState(false);
+
+  // Track dirty state: quiz is dirty if user has answered questions but hasn't finished
+  useEffect(() => {
+    if (onDirtyStateChange) {
+      const isDirty = completedExercises.length > 0 && !showSummary;
+      onDirtyStateChange(isDirty);
+    }
+  }, [completedExercises.length, showSummary, onDirtyStateChange]);
 
   // Shuffle questions if quiz.shuffle is true
   const exercises = useMemo(() => {

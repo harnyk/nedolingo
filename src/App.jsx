@@ -1,27 +1,16 @@
-import { useState } from 'react';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import QuizList from './components/QuizList';
-import Quiz from './components/Quiz';
+import QuizPage from './components/QuizPage';
 import LanguageSwitcher from './components/LanguageSwitcher';
 
 export default function App() {
-  const [selectedQuiz, setSelectedQuiz] = useState(null);
-
-  const handleSelectQuiz = (quiz) => {
-    setSelectedQuiz(quiz);
-  };
-
-  const handleBackToList = () => {
-    setSelectedQuiz(null);
-  };
-
   return (
-    <>
+    <HashRouter>
       <LanguageSwitcher />
-      {selectedQuiz ? (
-        <Quiz quiz={selectedQuiz} onBack={handleBackToList} />
-      ) : (
-        <QuizList onSelectQuiz={handleSelectQuiz} />
-      )}
-    </>
+      <Routes>
+        <Route path="/" element={<QuizList />} />
+        <Route path="/q/:slug" element={<QuizPage />} />
+      </Routes>
+    </HashRouter>
   );
 }
