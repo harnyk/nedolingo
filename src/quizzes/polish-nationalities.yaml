@@ -1,103 +1,203 @@
-title: Polish Nationalities
+title: Польские национальности
 slug: polish-nationalities
-description: Learn how to say different nationalities in Polish
+description: Изучите названия национальностей на польском языке
 questions:
   - id: 1
-    question: "Wybierz poprawną formę słowa dla osoby z Ameryki"
+    question: "венгр"
     type: multiple-choice
     options:
-      - Amerykanin
-      - Amerykan
-      - Amerika
-      - Amerykaniec
-    correctAnswer: Amerykanin
+      - "Węgier"
+      - "Węgorz"
+      - "Węgr"
+      - "Węgierczyk"
+    correctAnswer: "Węgier"
 
   - id: 2
-    question: "Wybierz poprawną formę słowa dla osoby z Francji"
+    question: "венгерка"
     type: multiple-choice
     options:
-      - Francuz
-      - Francuzin
-      - Francia
-      - Francec
-    correctAnswer: Francuz
+      - "Węgierka"
+      - "Węgrzynka"
+      - "Węgry"
+      - "Węgrka"
+    correctAnswer: "Węgierka"
 
   - id: 3
-    question: "Wybierz poprawną formę słowa dla osoby z Niemiec"
+    question: "финн"
     type: multiple-choice
     options:
-      - Niemiec
-      - Niemiecki
-      - Niemczyk
-      - Germania
-    correctAnswer: Niemiec
+      - "Fin"
+      - "Finn"
+      - "Finlandczyk"
+      - "Fińczyk"
+    correctAnswer: "Fin"
 
   - id: 4
-    question: "Wybierz poprawną formę słowa dla osoby z Rosji"
+    question: "финка"
     type: multiple-choice
     options:
-      - Rosjanin
-      - Rosyjczyk
-      - Rosjec
-      - Rusek
-    correctAnswer: Rosjanin
+      - "Finka"
+      - "Finnka"
+      - "Finlandka"
+      - "Finianka"
+    correctAnswer: "Finka"
 
   - id: 5
-    question: "Wybierz poprawną formę słowa dla osoby z Włoch"
+    question: "турок"
     type: multiple-choice
     options:
-      - Włoch
-      - Włoszyk
-      - Włoski
-      - Italia
-    correctAnswer: Włoch
+      - "Turek"
+      - "Turk"
+      - "Turczyk"
+      - "Tur"
+    correctAnswer: "Turek"
 
   - id: 6
-    question: "Wybierz poprawną formę słowa dla osoby z Anglii"
+    question: "турчанка"
     type: multiple-choice
     options:
-      - Anglik
-      - Angliec
-      - Angielczyk
-      - England
-    correctAnswer: Anglik
+      - "Turczynka"
+      - "Turka"
+      - "Tureczka"
+      - "Turkini"
+    correctAnswer: "Turczynka"
 
   - id: 7
-    question: "Wybierz poprawną formę słowa dla osoby z Hiszpanii"
+    question: "китаец"
     type: multiple-choice
     options:
-      - Hiszpan
-      - Hiszpaniec
-      - Hiszpańczyk
-      - Espana
-    correctAnswer: Hiszpan
+      - "Chińczyk"
+      - "Chiniec"
+      - "Chinańczyk"
+      - "Kinijczyk"
+    correctAnswer: "Chińczyk"
 
   - id: 8
-    question: "Wybierz poprawną formę słowa dla osoby z Chin"
+    question: "китаянка"
     type: multiple-choice
     options:
-      - Chińczyk
-      - Chiniec
-      - Chinan
-      - China
-    correctAnswer: Chińczyk
+      - "Chinka"
+      - "Chińczykka"
+      - "Chinini"
+      - "Chinianka"
+    correctAnswer: "Chinka"
 
   - id: 9
-    question: "Wybierz poprawną formę słowa dla osoby z Japonii"
+    question: "таиландец"
     type: multiple-choice
     options:
-      - Japończyk
-      - Japoniec
-      - Japanin
-      - Japoński
-    correctAnswer: Japończyk
+      - "Taj"
+      - "Tajlandczyk"
+      - "Tajlandin"
+      - "Tajczyk"
+    correctAnswer: "Taj"
 
   - id: 10
-    question: "Wybierz poprawną formę słowa dla osoby z Portugalii"
+    question: "таиландка"
     type: multiple-choice
     options:
-      - Portugalczyk
-      - Portugalec
-      - Portugal
-      - Portugalin
-    correctAnswer: Portugalczyk
+      - "Tajka"
+      - "Tajlandka"
+      - "Tajlandini"
+      - "Taja"
+    correctAnswer: "Tajka"
+
+  - id: 11
+    question: "израильтянин (гражданин Израиля)"
+    type: multiple-choice
+    options:
+      - "Izraelczyk"
+      - "Izraelanin"
+      - "Izraelita"
+      - "Izraelczykowie"
+    correctAnswer: "Izraelczyk"
+
+  - id: 12
+    question: "израильтянка"
+    type: multiple-choice
+    options:
+      - "Izraelka"
+      - "Izraelczynka"
+      - "Izraelina"
+      - "Izraela"
+    correctAnswer: "Izraelka"
+
+  - id: 13
+    question: "еврей (национальность)"
+    type: multiple-choice
+    options:
+      - "Żyd"
+      - "Żydin"
+      - "Żydczyk"
+      - "Ebrej"
+    correctAnswer: "Żyd"
+
+  - id: 14
+    question: "еврейка"
+    type: multiple-choice
+    options:
+      - "Żydówka"
+      - "Żydka"
+      - "Żydini"
+      - "Żydówna"
+    correctAnswer: "Żydówka"
+
+  - id: 15
+    question: "голландец"
+    type: multiple-choice
+    options:
+      - "Holender"
+      - "Holandczyk"
+      - "Hollandczyk"
+      - "Holand"
+    correctAnswer: "Holender"
+
+  - id: 16
+    question: "голландка"
+    type: multiple-choice
+    options:
+      - "Holenderka"
+      - "Holandka"
+      - "Holandini"
+      - "Holandia"
+    correctAnswer: "Holenderka"
+
+  - id: 17
+    question: "украинец"
+    type: multiple-choice
+    options:
+      - "Ukrainiec"
+      - "Ukrainin"
+      - "Ukraińczyk"
+      - "Ukrainiak"
+    correctAnswer: "Ukrainiec"
+
+  - id: 18
+    question: "украинка"
+    type: multiple-choice
+    options:
+      - "Ukrainka"
+      - "Ukrainia"
+      - "Ukrainczyni"
+      - "Ukrainieczka"
+    correctAnswer: "Ukrainka"
+
+  - id: 19
+    question: "датчанин"
+    type: multiple-choice
+    options:
+      - "Duńczyk"
+      - "Daniańczyk"
+      - "Danin"
+      - "Duńczykowie"
+    correctAnswer: "Duńczyk"
+
+  - id: 20
+    question: "датчанка"
+    type: multiple-choice
+    options:
+      - "Dunka"
+      - "Dunianka"
+      - "Duńczyca"
+      - "Dania"
+    correctAnswer: "Dunka"
