@@ -1,15 +1,17 @@
-import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { quizzesMap } from '../quizzes';
 import Quiz from './Quiz/Quiz';
+import type { QuizzesMap } from '../types';
 
 export default function QuizPage() {
-  const { slug } = useParams();
+  const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
   const isDirtyRef = useRef(false);
   const isNavigatingRef = useRef(false);
 
-  const quiz = quizzesMap[slug];
+  const quizMap = quizzesMap as QuizzesMap;
+  const quiz = slug ? quizMap[slug] : undefined;
 
   useEffect(() => {
     // If quiz not found, redirect to list
@@ -20,7 +22,7 @@ export default function QuizPage() {
 
   // Set up beforeunload warning for incomplete quizzes
   useEffect(() => {
-    const handleBeforeUnload = (e) => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
       if (isDirtyRef.current && !isNavigatingRef.current) {
         e.preventDefault();
         // Modern browsers require returnValue to be set (value is ignored, browser shows standard message)
@@ -33,7 +35,7 @@ export default function QuizPage() {
     return () => window.removeEventListener('beforeunload', handleBeforeUnload);
   }, []);
 
-  const handleDirtyStateChange = (isDirty) => {
+  const handleDirtyStateChange = (isDirty: boolean) => {
     isDirtyRef.current = isDirty;
   };
 

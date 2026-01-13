@@ -1,4 +1,6 @@
-export default function QuizProgressBar({ current, total, percentage, t }) {
+import type { QuizProgressBarProps } from '../../types';
+
+export default function QuizProgressBar({ current, total, percentage, t }: QuizProgressBarProps) {
   return (
     <div className="mb-6">
       <div className="flex justify-between text-sm text-gray-600 mb-2">

@@ -1,4 +1,6 @@
-export default function QuizQuestion({ question }) {
+import type { QuizQuestionProps } from '../../types';
+
+export default function QuizQuestion({ question }: QuizQuestionProps) {
   return (
     <div className="mb-8">
       <h2
