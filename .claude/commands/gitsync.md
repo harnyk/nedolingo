@@ -2,7 +2,7 @@
 allowed-tools: Bash(git:*), Bash(nr:*)
 ---
 
-Stage changes, commit, push and deploy.
+Stage changes, commit, push.
 Do it in a single bash command.
 
 Use commit conventions:
@@ -14,3 +14,5 @@ Description
 
 Your signature
 ```
+
+Do not deploy.
