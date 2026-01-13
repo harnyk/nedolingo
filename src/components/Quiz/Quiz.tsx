@@ -7,7 +7,8 @@ import QuizQuestion from './QuizQuestion';
 import QuizAnswerOptions from './QuizAnswerOptions';
 import QuizResultDisplay from './QuizResultDisplay';
 import QuizActionButton from './QuizActionButton';
-import type { CompletedExercise, Question, QuizProps } from '../../types';
+import type { CompletedExercise, QuizProps } from '../../types';
+import { selectQuestions } from '../../utils/quiz-selection';
 
 export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
   const { t } = useI18n();
@@ -42,36 +43,12 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
       return shuffled;
     };
 
-    // Shuffle questions unless noShuffle is set at quiz level
-    let questions = quiz.noShuffle ? quiz.questions : shuffleArray(quiz.questions);
-    if (typeof quiz.maxQuestions === 'number') {
-      const limit = Math.max(0, Math.min(questions.length, Math.floor(quiz.maxQuestions)));
-      if (limit < questions.length && !quiz.noShuffle) {
-        const lastSelection = lastSelectionRef.current;
-        const lastSet = lastSelection ? new Set(lastSelection) : null;
-        let attempts = 0;
-        while (attempts < 5) {
-          const selection = questions.slice(0, limit);
-          if (!lastSet) {
-            questions = selection;
-            break;
-          }
-          const matchesLast = selection.length === lastSet.size
-            && selection.every((question) => lastSet.has(question.question));
-          if (!matchesLast) {
-            questions = selection;
-            break;
-          }
-          questions = shuffleArray(quiz.questions);
-          attempts += 1;
-        }
-        if (attempts >= 5) {
-          questions = questions.slice(0, limit);
-        }
-      } else {
-        questions = questions.slice(0, limit);
-      }
-    }
+    let questions = selectQuestions({
+      questions: quiz.questions,
+      maxQuestions: quiz.maxQuestions,
+      noShuffle: quiz.noShuffle,
+      previousSelection: lastSelectionRef.current
+    });
 
     // Shuffle options for each multiple-choice question unless noShuffle is set
     questions = questions.map((question) => {
