@@ -42,6 +42,10 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
 
     // Shuffle questions unless noShuffle is set at quiz level
     let questions = quiz.noShuffle ? quiz.questions : shuffleArray(quiz.questions);
+    if (typeof quiz.maxQuestions === 'number') {
+      const limit = Math.max(0, Math.min(questions.length, Math.floor(quiz.maxQuestions)));
+      questions = questions.slice(0, limit);
+    }
 
     // Shuffle options for each multiple-choice question unless noShuffle is set
     questions = questions.map((question) => {

@@ -41,6 +41,9 @@ export interface Quiz {
   /** Array of questions in this quiz */
   questions: Question[];
 
+  /** Limit how many questions to present after shuffling */
+  maxQuestions?: number;
+
   /** If true, disables shuffling of questions and options */
   noShuffle?: boolean;
 }

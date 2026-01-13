@@ -30,8 +30,10 @@ test.describe('Quiz Flow', () => {
     await expect(page).toHaveURL(/\/#\/q\/polish-przyjaciele-cases/);
     await expect(page.getByRole('heading', { name: /Склонения слова "przyjaciele"/ })).toBeVisible();
 
-    // 5. Answer all questions from the YAML
-    const totalQuestions = questions.length;
+    // 5. Answer all questions from the YAML (respect maxQuestions)
+    const totalQuestions = typeof quizData.maxQuestions === 'number'
+      ? Math.min(questions.length, Math.max(0, Math.floor(quizData.maxQuestions)))
+      : questions.length;
     for (let i = 0; i < totalQuestions; i++) {
       // Wait for question to be visible
       const questionLocator = page.getByTestId('quiz-question-heading');

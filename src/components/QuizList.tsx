@@ -21,26 +21,31 @@ export default function QuizList() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {quizList.map((quiz) => (
-            <Link
-              key={quiz.slug}
-              to={`/q/${quiz.slug}`}
-              className="bg-white rounded-2xl shadow-lg p-6 text-left hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 group block"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
-                    {quiz.title}
-                  </h2>
-                  <p className="text-gray-600 mb-4">{quiz.description}</p>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <span>{quiz.questions.length} {t('quiz_list.questions')}</span>
+          {quizList.map((quiz) => {
+            const totalQuestions = typeof quiz.maxQuestions === 'number'
+              ? Math.min(quiz.questions.length, Math.max(0, Math.floor(quiz.maxQuestions)))
+              : quiz.questions.length;
+            return (
+              <Link
+                key={quiz.slug}
+                to={`/q/${quiz.slug}`}
+                className="bg-white rounded-2xl shadow-lg p-6 text-left hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1 group block"
+              >
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <h2 className="text-2xl font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">
+                      {quiz.title}
+                    </h2>
+                    <p className="text-gray-600 mb-4">{quiz.description}</p>
+                    <div className="flex items-center text-sm text-gray-500">
+                      <span>{totalQuestions} {t('quiz_list.questions')}</span>
+                    </div>
                   </div>
+                  <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" />
                 </div>
-                <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all flex-shrink-0 ml-4" />
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>
