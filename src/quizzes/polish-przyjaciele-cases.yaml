@@ -81,3 +81,123 @@ questions:
       - "przyjacioły"
       - "przyjacieli"
     correctAnswer: "przyjaciół"
+
+  # Celownik
+  - question: "Opowiadam o tym moim ________."
+    type: multiple-choice
+    options:
+      - "przyjaciołom"
+      - "przyjaciółom"
+      - "przyjacielom"
+      - "przyjaciółami"
+    correctAnswer: "przyjaciołom"
+
+  # Biernik
+  - question: "Spotkałem wczoraj wszystkich ________."
+    type: multiple-choice
+    options:
+      - "przyjaciół"
+      - "przyjaciele"
+      - "przyjaciółów"
+      - "przyjacielów"
+    correctAnswer: "przyjaciół"
+
+  # Miejscownik
+  - question: "Rozmawialiśmy o naszych ________."
+    type: multiple-choice
+    options:
+      - "przyjaciołach"
+      - "przyjaciółach"
+      - "przyjacielach"
+      - "przyjaciołech"
+    correctAnswer: "przyjaciołach"
+
+  # Narzędnik
+  - question: "Między ________ zawsze panuje zgoda."
+    type: multiple-choice
+    options:
+      - "przyjaciółmi"
+      - "przyjacielami"
+      - "przyjaciółamy"
+      - "przyjaciołmi"
+    correctAnswer: "przyjaciółmi"
+
+  # Mianownik
+  - question: "Moi ________ mieszkają w Krakowie."
+    type: multiple-choice
+    options:
+      - "przyjaciele"
+      - "przyjacieli"
+      - "przyjacielowie"
+      - "przyjacielie"
+    correctAnswer: "przyjaciele"
+
+  # Dopełniacz
+  - question: "Bez moich ________ byłoby mi smutno."
+    type: multiple-choice
+    options:
+      - "przyjaciół"
+      - "przyjacielów"
+      - "przyjacioły"
+      - "przyjacieli"
+    correctAnswer: "przyjaciół"
+
+  # Celownik
+  - question: "Dziękuję moim ________ za pomoc."
+    type: multiple-choice
+    options:
+      - "przyjaciołom"
+      - "przyjaciółom"
+      - "przyjacielom"
+      - "przyjaciołami"
+    correctAnswer: "przyjaciołom"
+
+  # Biernik
+  - question: "Zobaczyłem na ulicy moich ________."
+    type: multiple-choice
+    options:
+      - "przyjaciół"
+      - "przyjaciele"
+      - "przyjaciółów"
+      - "przyjacioły"
+    correctAnswer: "przyjaciół"
+
+  # Narzędnik
+  - question: "Z moimi ________ nigdy się nie nudzę."
+    type: multiple-choice
+    options:
+      - "przyjaciółmi"
+      - "przyjacielami"
+      - "przyjaciołami"
+      - "przyjaciołmi"
+    correctAnswer: "przyjaciółmi"
+
+  # Miejscownik
+  - question: "Piszę o ________ w pamiętniku."
+    type: multiple-choice
+    options:
+      - "przyjaciołach"
+      - "przyjaciółach"
+      - "przyjacielach"
+      - "przyjaciołech"
+    correctAnswer: "przyjaciołach"
+
+  # Wołacz
+  - question: "________, chodźcie tutaj!"
+    type: multiple-choice
+    options:
+      - "Przyjaciele"
+      - "Przyjaciół"
+      - "Przyjaciołowie"
+      - "Przyjacielowie"
+    correctAnswer: "Przyjaciele"
+
+  # Dopełniacz
+  - question: "Nie mam tutaj żadnych ________."
+    type: multiple-choice
+    options:
+      - "przyjaciół"
+      - "przyjacieli"
+      - "przyjacielów"
+      - "przyjaciółów"
+    correctAnswer: "przyjaciół"
