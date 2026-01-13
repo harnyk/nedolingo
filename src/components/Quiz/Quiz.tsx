@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useI18n } from '../../contexts/I18nContext';
 import QuizSummary from './QuizSummary';
 import QuizHeader from './QuizHeader';
@@ -20,6 +20,8 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
   const [score, setScore] = useState(0);
   const [completedExercises, setCompletedExercises] = useState<CompletedExercise[]>([]);
   const [showSummary, setShowSummary] = useState(false);
+  const [shuffleSeed, setShuffleSeed] = useState(0);
+  const lastSelectionRef = useRef<string[] | null>(null);
 
   // Track dirty state: quiz is dirty if user has answered questions but hasn't finished
   useEffect(() => {
@@ -44,7 +46,31 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
     let questions = quiz.noShuffle ? quiz.questions : shuffleArray(quiz.questions);
     if (typeof quiz.maxQuestions === 'number') {
       const limit = Math.max(0, Math.min(questions.length, Math.floor(quiz.maxQuestions)));
-      questions = questions.slice(0, limit);
+      if (limit < questions.length && !quiz.noShuffle) {
+        const lastSelection = lastSelectionRef.current;
+        const lastSet = lastSelection ? new Set(lastSelection) : null;
+        let attempts = 0;
+        while (attempts < 5) {
+          const selection = questions.slice(0, limit);
+          if (!lastSet) {
+            questions = selection;
+            break;
+          }
+          const matchesLast = selection.length === lastSet.size
+            && selection.every((question) => lastSet.has(question.question));
+          if (!matchesLast) {
+            questions = selection;
+            break;
+          }
+          questions = shuffleArray(quiz.questions);
+          attempts += 1;
+        }
+        if (attempts >= 5) {
+          questions = questions.slice(0, limit);
+        }
+      } else {
+        questions = questions.slice(0, limit);
+      }
     }
 
     // Shuffle options for each multiple-choice question unless noShuffle is set
@@ -60,7 +86,7 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
     });
 
     return questions;
-  }, [quiz.questions, quiz.noShuffle]);
+  }, [quiz.questions, quiz.noShuffle, quiz.maxQuestions, shuffleSeed]);
   const currentExercise = exercises[currentExerciseIndex];
 
   const normalizeAnswer = (answer: string) => {
@@ -110,6 +136,7 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
   };
 
   const resetQuiz = () => {
+    lastSelectionRef.current = exercises.map((exercise) => exercise.question);
     setCurrentExerciseIndex(0);
     setSelectedOption('');
     setTextInput('');
@@ -119,6 +146,7 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
     setScore(0);
     setCompletedExercises([]);
     setShowSummary(false);
+    setShuffleSeed((prev) => prev + 1);
   };
 
   const getProgressPercentage = () => {

@@ -107,4 +107,74 @@ test.describe('Quiz Flow', () => {
     await expect(page.getByRole('button', { name: 'Назад к тестам' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'Попробовать снова' })).toBeVisible();
   });
+
+  test('should reshuffle questions when retrying a quiz', async ({ page }) => {
+    // Load quiz data from YAML
+    const quizPath = path.join(process.cwd(), 'src/quizzes/polish-przyjaciele-cases.yaml');
+    const quizData = yaml.load(fs.readFileSync(quizPath, 'utf8'));
+    const totalQuestions = typeof quizData.maxQuestions === 'number'
+      ? Math.min(quizData.questions.length, Math.max(0, Math.floor(quizData.maxQuestions)))
+      : quizData.questions.length;
+
+    const collectQuestionOrder = async () => {
+      const order = [];
+      for (let i = 0; i < totalQuestions; i++) {
+        const questionLocator = page.getByTestId('quiz-question-heading');
+        await expect(questionLocator).toBeVisible();
+        const questionText = await questionLocator.textContent();
+        order.push(questionText);
+
+        const optionButtons = page.getByTestId('quiz-option-button');
+        await optionButtons.first().click();
+
+        const checkButton = page.getByRole('button', { name: 'Проверить ответ' });
+        await expect(checkButton).toBeEnabled();
+        await checkButton.click();
+
+        await page.getByTestId('quiz-result-icon').waitFor();
+
+        const isLastQuestion = i === totalQuestions - 1;
+        const nextButton = page.getByRole('button', {
+          name: isLastQuestion ? 'Посмотреть результаты' : 'Следующий вопрос'
+        });
+        await nextButton.click();
+      }
+      return order;
+    };
+
+    // 1. Navigate to landing page
+    await page.goto('/');
+
+    // 2. Switch to Russian to have consistent locale
+    await page.getByTestId('language-button-ru').click();
+
+    // 3. Verify quiz list is loaded
+    await expect(page.getByText('Nedolingo')).toBeVisible();
+
+    // 4. Click on polish-przyjaciele-cases quiz
+    await page.getByRole('link', { name: /Склонения слова "przyjaciele"/ }).click();
+
+    // 5. Complete the quiz once and capture question order
+    const firstRunOrder = await collectQuestionOrder();
+
+    // 6. Retry the quiz
+    await page.getByRole('button', { name: 'Попробовать снова' }).click();
+
+    // 7. Complete the quiz again and capture question order
+    const secondRunOrder = await collectQuestionOrder();
+
+    // Expect order and selection to change after retrying
+    expect(secondRunOrder).not.toEqual(firstRunOrder);
+
+    const firstRunSet = new Set(firstRunOrder);
+    const secondRunSet = new Set(secondRunOrder);
+    let hasDifferentQuestions = false;
+    for (const question of firstRunSet) {
+      if (!secondRunSet.has(question)) {
+        hasDifferentQuestions = true;
+        break;
+      }
+    }
+    expect(hasDifferentQuestions).toBe(true);
+  });
 });
