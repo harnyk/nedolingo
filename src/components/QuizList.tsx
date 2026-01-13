@@ -2,9 +2,12 @@ import { Link } from 'react-router-dom';
 import { BookOpen, ArrowRight } from 'lucide-react';
 import quizzes from '../quizzes';
 import { useI18n } from '../contexts/I18nContext';
+import type { Quiz } from '../types';
 
 export default function QuizList() {
   const { t } = useI18n();
+
+  const quizList = quizzes as Quiz[];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
@@ -18,7 +21,7 @@ export default function QuizList() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {quizzes.map((quiz) => (
+          {quizList.map((quiz) => (
             <Link
               key={quiz.slug}
               to={`/q/${quiz.slug}`}

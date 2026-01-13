@@ -1,4 +1,13 @@
-export default function QuizActionButton({ showResult, isLastQuestion, disabled, onCheck, onNext, t }) {
+import type { QuizActionButtonProps } from '../../types';
+
+export default function QuizActionButton({
+  showResult,
+  isLastQuestion,
+  disabled,
+  onCheck,
+  onNext,
+  t
+}: QuizActionButtonProps) {
   if (!showResult) {
     return (
       <button

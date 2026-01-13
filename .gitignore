@@ -27,3 +27,8 @@ dist-ssr
 test-results/
 playwright-report/
 playwright/.cache/
+
+# Agents
+AGENTS.md
+CLAUDE.md
+GEMINI.md

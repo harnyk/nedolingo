@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useI18n } from '../../contexts/I18nContext';
 import QuizSummary from './QuizSummary';
 import QuizHeader from './QuizHeader';
@@ -7,8 +7,9 @@ import QuizQuestion from './QuizQuestion';
 import QuizAnswerOptions from './QuizAnswerOptions';
 import QuizResultDisplay from './QuizResultDisplay';
 import QuizActionButton from './QuizActionButton';
+import type { CompletedExercise, Question, QuizProps } from '../../types';
 
-export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
+export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
   const { t } = useI18n();
   const [currentExerciseIndex, setCurrentExerciseIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState('');
@@ -17,7 +18,7 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
   const [isCorrect, setIsCorrect] = useState(false);
   const [userAnswerForDisplay, setUserAnswerForDisplay] = useState('');
   const [score, setScore] = useState(0);
-  const [completedExercises, setCompletedExercises] = useState([]);
+  const [completedExercises, setCompletedExercises] = useState<CompletedExercise[]>([]);
   const [showSummary, setShowSummary] = useState(false);
 
   // Track dirty state: quiz is dirty if user has answered questions but hasn't finished
@@ -30,7 +31,7 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
 
   // Shuffle questions and options by default (unless noShuffle is true)
   const exercises = useMemo(() => {
-    const shuffleArray = (array) => {
+    const shuffleArray = <T,>(array: T[]): T[] => {
       const shuffled = [...array];
       for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -43,7 +44,7 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
     let questions = quiz.noShuffle ? quiz.questions : shuffleArray(quiz.questions);
 
     // Shuffle options for each multiple-choice question unless noShuffle is set
-    questions = questions.map(question => {
+    questions = questions.map((question) => {
       if (question.type === 'multiple-choice' && question.options) {
         const shouldShuffle = !quiz.noShuffle && !question.noShuffle;
         return {
@@ -58,7 +59,7 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
   }, [quiz.questions, quiz.noShuffle]);
   const currentExercise = exercises[currentExerciseIndex];
 
-  const normalizeAnswer = (answer) => {
+  const normalizeAnswer = (answer: string) => {
     return answer.trim().toLowerCase();
   };
 
@@ -120,8 +121,12 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
     return (completedExercises.length / exercises.length) * 100;
   };
 
+  if (!currentExercise) {
+    return null;
+  }
+
   if (showSummary) {
-    const incorrectExercises = completedExercises.filter(ex => !ex.isCorrect);
+    const incorrectExercises = completedExercises.filter((exercise) => !exercise.isCorrect);
 
     return (
       <QuizSummary

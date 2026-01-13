@@ -1,3 +1,6 @@
+import type { ChangeEvent, KeyboardEvent } from 'react';
+import type { QuizAnswerOptionsProps } from '../../types';
+
 export default function QuizAnswerOptions({
   exercise,
   selectedOption,
@@ -7,7 +10,7 @@ export default function QuizAnswerOptions({
   onSubmit,
   showResult,
   t
-}) {
+}: QuizAnswerOptionsProps) {
   if (showResult) {
     return null;
   }
@@ -15,7 +18,7 @@ export default function QuizAnswerOptions({
   return (
     <div className="space-y-4 mb-8" data-testid="quiz-answer-options">
       {exercise.type === 'multiple-choice' ? (
-        exercise.options.map((option) => (
+        (exercise.options ?? []).map((option) => (
           <button
             key={option}
             onClick={() => onSelectOption(option)}
@@ -33,8 +36,8 @@ export default function QuizAnswerOptions({
         <input
           type="text"
           value={textInput}
-          onChange={(e) => onTextInputChange(e.target.value)}
-          onKeyPress={(e) => e.key === 'Enter' && textInput && onSubmit()}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => onTextInputChange(e.target.value)}
+          onKeyPress={(e: KeyboardEvent<HTMLInputElement>) => e.key === 'Enter' && textInput && onSubmit()}
           placeholder={t('quiz.type_answer')}
           className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
           autoFocus

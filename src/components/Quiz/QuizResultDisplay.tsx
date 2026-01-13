@@ -1,6 +1,7 @@
 import { CheckCircle, XCircle } from 'lucide-react';
+import type { QuizResultDisplayProps } from '../../types';
 
-export default function QuizResultDisplay({ isCorrect, userAnswer, correctAnswer, t }) {
+export default function QuizResultDisplay({ isCorrect, userAnswer, correctAnswer, t }: QuizResultDisplayProps) {
   return (
     <div className="mb-8">
       <div className="text-center mb-6">

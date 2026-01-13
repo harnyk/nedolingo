@@ -1,6 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
+import type { QuizHeaderProps } from '../../types';
 
-export default function QuizHeader({ title, onBack, t }) {
+export default function QuizHeader({ title, onBack, t }: QuizHeaderProps) {
   return (
     <div className="mb-6">
       <button

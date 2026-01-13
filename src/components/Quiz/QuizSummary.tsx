@@ -1,6 +1,14 @@
 import { Trophy, ArrowLeft, RotateCcw } from 'lucide-react';
+import type { QuizSummaryProps } from '../../types';
 
-export default function QuizSummary({ score, totalExercises, incorrectExercises, onBack, onRetry, t }) {
+export default function QuizSummary({
+  score,
+  totalExercises,
+  incorrectExercises,
+  onBack,
+  onRetry,
+  t
+}: QuizSummaryProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl w-full">
