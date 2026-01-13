@@ -4,9 +4,12 @@ export default function QuizResultDisplay({ isCorrect, userAnswer, correctAnswer
   return (
     <div className="mb-8">
       <div className="text-center mb-6">
-        <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${
-          isCorrect ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
-        }`}>
+        <div
+          className={`inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 ${
+            isCorrect ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
+          }`}
+          data-testid="quiz-result-icon"
+        >
           {isCorrect ? <CheckCircle className="w-8 h-8" /> : <XCircle className="w-8 h-8" />}
         </div>
         <p className={`text-lg font-semibold ${
@@ -18,11 +21,14 @@ export default function QuizResultDisplay({ isCorrect, userAnswer, correctAnswer
 
       <div className="space-y-3">
         {/* User's Answer */}
-        <div className={`p-4 rounded-lg border-2 flex items-center gap-3 ${
-          isCorrect
-            ? 'bg-green-50 border-green-300'
-            : 'bg-red-50 border-red-300'
-        }`}>
+        <div
+          className={`p-4 rounded-lg border-2 flex items-center gap-3 ${
+            isCorrect
+              ? 'bg-green-50 border-green-300'
+              : 'bg-red-50 border-red-300'
+          }`}
+          data-testid="quiz-user-answer-card"
+        >
           {isCorrect ? (
             <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
           ) : (
@@ -42,7 +48,10 @@ export default function QuizResultDisplay({ isCorrect, userAnswer, correctAnswer
 
         {/* Correct Answer (only if incorrect) */}
         {!isCorrect && (
-          <div className="p-4 rounded-lg border-2 bg-green-50 border-green-300 flex items-center gap-3">
+          <div
+            className="p-4 rounded-lg border-2 bg-green-50 border-green-300 flex items-center gap-3"
+            data-testid="quiz-correct-answer-card"
+          >
             <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
             <div className="flex-1">
               <p className="text-xs text-gray-500 mb-1">{t('results.correct_answer')}</p>

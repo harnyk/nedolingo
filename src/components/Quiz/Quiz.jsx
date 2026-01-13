@@ -117,7 +117,7 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }) {
   };
 
   const getProgressPercentage = () => {
-    return ((currentExerciseIndex + 1) / exercises.length) * 100;
+    return (completedExercises.length / exercises.length) * 100;
   };
 
   if (showSummary) {

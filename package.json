@@ -9,7 +9,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "deploy": "pnpm build && gh-pages -d dist",
-    "pages:enable": "gh api repos/harnyk/nedolingo/pages -X POST -f source[branch]=gh-pages -f source[path]=/"
+    "pages:enable": "gh api repos/harnyk/nedolingo/pages -X POST -f source[branch]=gh-pages -f source[path]=/",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug"
   },
   "keywords": [
     "quiz",
@@ -22,6 +25,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.25.0",
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@vitejs/plugin-react": "^5.1.2",
     "autoprefixer": "^10.4.23",

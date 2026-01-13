@@ -17,10 +17,19 @@ export default function QuizSummary({ score, totalExercises, incorrectExercises,
         {incorrectExercises.length > 0 && (
           <div className="mb-8">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">{t('results.review_incorrect')}</h2>
-            <div className="space-y-4">
+            <div className="space-y-4" data-testid="quiz-incorrect-cards-container">
               {incorrectExercises.map((exercise, index) => (
-                <div key={index} className="border border-red-200 rounded-lg p-4 bg-red-50">
-                  <p className="font-medium text-gray-800 mb-2">{exercise.question}</p>
+                <div
+                  key={index}
+                  className="border border-red-200 rounded-lg p-4 bg-red-50"
+                  data-testid="quiz-incorrect-card"
+                >
+                  <p
+                    className="font-medium text-gray-800 mb-2"
+                    data-testid="quiz-incorrect-question"
+                  >
+                    {exercise.question}
+                  </p>
                   <p className="text-sm text-gray-600 mb-1">
                     {t('results.your_answer')} <span className="font-medium">{exercise.userAnswer || t('results.no_answer')}</span>
                   </p>

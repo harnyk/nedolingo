@@ -13,7 +13,7 @@ export default function QuizAnswerOptions({
   }
 
   return (
-    <div className="space-y-4 mb-8">
+    <div className="space-y-4 mb-8" data-testid="quiz-answer-options">
       {exercise.type === 'multiple-choice' ? (
         exercise.options.map((option) => (
           <button
@@ -24,6 +24,7 @@ export default function QuizAnswerOptions({
                 ? 'border-blue-500 bg-blue-50 text-blue-700'
                 : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
             }`}
+            data-testid="quiz-option-button"
           >
             {option}
           </button>
@@ -37,6 +38,7 @@ export default function QuizAnswerOptions({
           placeholder={t('quiz.type_answer')}
           className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none text-lg"
           autoFocus
+          data-testid="quiz-text-input"
         />
       )}
     </div>

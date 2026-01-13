@@ -18,6 +18,7 @@ export default function LanguageSwitcher() {
                 ? 'bg-blue-500 text-white'
                 : 'text-gray-600 hover:bg-gray-100'
             }`}
+            data-testid={`language-button-${lang}`}
           >
             {t(`language.${lang}`)}
           </button>
