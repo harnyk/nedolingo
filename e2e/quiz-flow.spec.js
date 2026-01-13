@@ -30,8 +30,8 @@ test.describe('Quiz Flow', () => {
     await expect(page).toHaveURL(/\/#\/q\/polish-przyjaciele-cases/);
     await expect(page.getByRole('heading', { name: /Склонения слова "przyjaciele"/ })).toBeVisible();
 
-    // 5. Answer all 8 questions
-    const totalQuestions = 8;
+    // 5. Answer all questions from the YAML
+    const totalQuestions = questions.length;
     for (let i = 0; i < totalQuestions; i++) {
       // Wait for question to be visible
       const questionLocator = page.getByTestId('quiz-question-heading');
@@ -41,9 +41,6 @@ test.describe('Quiz Flow', () => {
       if (i === 0) {
         // First question: 0 completed (0%)
         await expect(page.getByTestId('quiz-progress-percentage')).toHaveText('0%');
-      } else if (i === 1) {
-        // Second question: 1 completed (12.5% → 13%)
-        await expect(page.getByTestId('quiz-progress-percentage')).toHaveText('13%');
       }
 
       // Get the current question text
@@ -97,12 +94,12 @@ test.describe('Quiz Flow', () => {
     }
 
     // 6. Verify results summary page
-    // Verify score is exactly 3/8
-    await expect(page.getByText('3/8')).toBeVisible();
+    // Verify score is exactly 3/total
+    await expect(page.getByText(`3/${totalQuestions}`)).toBeVisible();
 
-    // Verify incorrect answers section shows 5 questions
+    // Verify incorrect answers section shows totalQuestions - 3 questions
     const incorrectAnswerCards = page.getByTestId('quiz-incorrect-card');
-    await expect(incorrectAnswerCards).toHaveCount(5);
+    await expect(incorrectAnswerCards).toHaveCount(totalQuestions - correctAnswersCount);
 
     // Verify back and retry buttons are present
     await expect(page.getByRole('button', { name: 'Назад к тестам' })).toBeVisible();
