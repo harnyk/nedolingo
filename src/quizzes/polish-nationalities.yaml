@@ -2,8 +2,7 @@ title: Польские национальности
 slug: polish-nationalities
 description: Изучите названия национальностей на польском языке
 questions:
-  - id: 1
-    question: "Венгр"
+  - question: "Венгр"
     type: multiple-choice
     options:
       - "Węgier"
@@ -12,8 +11,7 @@ questions:
       - "Węgierczyk"
     correctAnswer: "Węgier"
 
-  - id: 2
-    question: "Венгерка"
+  - question: "Венгерка"
     type: multiple-choice
     options:
       - "Węgierka"
@@ -22,8 +20,7 @@ questions:
       - "Węgrka"
     correctAnswer: "Węgierka"
 
-  - id: 3
-    question: "Финн"
+  - question: "Финн"
     type: multiple-choice
     options:
       - "Fin"
@@ -32,8 +29,7 @@ questions:
       - "Fińczyk"
     correctAnswer: "Fin"
 
-  - id: 4
-    question: "Финка"
+  - question: "Финка"
     type: multiple-choice
     options:
       - "Finka"
@@ -42,8 +38,7 @@ questions:
       - "Finianka"
     correctAnswer: "Finka"
 
-  - id: 5
-    question: "Турок"
+  - question: "Турок"
     type: multiple-choice
     options:
       - "Turek"
@@ -52,8 +47,7 @@ questions:
       - "Tur"
     correctAnswer: "Turek"
 
-  - id: 6
-    question: "Турчанка"
+  - question: "Турчанка"
     type: multiple-choice
     options:
       - "Turczynka"
@@ -62,8 +56,7 @@ questions:
       - "Turkini"
     correctAnswer: "Turczynka"
 
-  - id: 7
-    question: "Китаец"
+  - question: "Китаец"
     type: multiple-choice
     options:
       - "Chińczyk"
@@ -72,8 +65,7 @@ questions:
       - "Kinijczyk"
     correctAnswer: "Chińczyk"
 
-  - id: 8
-    question: "Китаянка"
+  - question: "Китаянка"
     type: multiple-choice
     options:
       - "Chinka"
@@ -82,8 +74,7 @@ questions:
       - "Chinianka"
     correctAnswer: "Chinka"
 
-  - id: 9
-    question: "Таиландец"
+  - question: "Таиландец"
     type: multiple-choice
     options:
       - "Taj"
@@ -92,8 +83,7 @@ questions:
       - "Tajczyk"
     correctAnswer: "Taj"
 
-  - id: 10
-    question: "Таиландка"
+  - question: "Таиландка"
     type: multiple-choice
     options:
       - "Tajka"
@@ -102,8 +92,7 @@ questions:
       - "Taja"
     correctAnswer: "Tajka"
 
-  - id: 11
-    question: "Израильтянин (гражданин Израиля)"
+  - question: "Израильтянин (гражданин Израиля)"
     type: multiple-choice
     options:
       - "Izraelczyk"
@@ -112,8 +101,7 @@ questions:
       - "Izraelczykowie"
     correctAnswer: "Izraelczyk"
 
-  - id: 12
-    question: "Израильтянка"
+  - question: "Израильтянка"
     type: multiple-choice
     options:
       - "Izraelka"
@@ -122,8 +110,7 @@ questions:
       - "Izraela"
     correctAnswer: "Izraelka"
 
-  - id: 13
-    question: "Еврей (национальность)"
+  - question: "Еврей (национальность)"
     type: multiple-choice
     options:
       - "Żyd"
@@ -132,8 +119,7 @@ questions:
       - "Ebrej"
     correctAnswer: "Żyd"
 
-  - id: 14
-    question: "Еврейка"
+  - question: "Еврейка"
     type: multiple-choice
     options:
       - "Żydówka"
@@ -142,8 +128,7 @@ questions:
       - "Żydówna"
     correctAnswer: "Żydówka"
 
-  - id: 15
-    question: "Голландец"
+  - question: "Голландец"
     type: multiple-choice
     options:
       - "Holender"
@@ -152,8 +137,7 @@ questions:
       - "Holand"
     correctAnswer: "Holender"
 
-  - id: 16
-    question: "Голландка"
+  - question: "Голландка"
     type: multiple-choice
     options:
       - "Holenderka"
@@ -162,8 +146,7 @@ questions:
       - "Holandia"
     correctAnswer: "Holenderka"
 
-  - id: 17
-    question: "Украинец"
+  - question: "Украинец"
     type: multiple-choice
     options:
       - "Ukrainiec"
@@ -172,8 +155,7 @@ questions:
       - "Ukrainiak"
     correctAnswer: "Ukrainiec"
 
-  - id: 18
-    question: "Украинка"
+  - question: "Украинка"
     type: multiple-choice
     options:
       - "Ukrainka"
@@ -182,8 +164,7 @@ questions:
       - "Ukrainieczka"
     correctAnswer: "Ukrainka"
 
-  - id: 19
-    question: "Датчанин"
+  - question: "Датчанин"
     type: multiple-choice
     options:
       - "Duńczyk"
@@ -192,8 +173,7 @@ questions:
       - "Duńczykowie"
     correctAnswer: "Duńczyk"
 
-  - id: 20
-    question: "Датчанка"
+  - question: "Датчанка"
     type: multiple-choice
     options:
       - "Dunka"

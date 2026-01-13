@@ -3,8 +3,7 @@ slug: polish-przyjaciele-cases
 description: Изучите склонения слова "przyjaciele" в польском языке
 questions:
   # Narzędnik
-  - id: 1
-    question: "Często podróżuję z moimi ________."
+  - question: "Często podróżuję z moimi ________."
     type: multiple-choice
     options:
       - "przyjaciółmi"
@@ -14,8 +13,7 @@ questions:
     correctAnswer: "przyjaciółmi"
 
   # Dopełniacz
-  - id: 2
-    question: "Nie widzę tutaj moich ________."
+  - question: "Nie widzę tutaj moich ________."
     type: multiple-choice
     options:
       - "przyjaciół"
@@ -25,8 +23,7 @@ questions:
     correctAnswer: "przyjaciół"
 
   # Mianownik
-  - id: 3
-    question: "To są moi najlepsi ________."
+  - question: "To są moi najlepsi ________."
     type: multiple-choice
     options:
       - "przyjaciele"
@@ -36,8 +33,7 @@ questions:
     correctAnswer: "przyjaciele"
 
   # Celownik
-  - id: 4
-    question: "Zawsze pomagam moim ________."
+  - question: "Zawsze pomagam moim ________."
     type: multiple-choice
     options:
       - "przyjaciołom"
@@ -47,8 +43,7 @@ questions:
     correctAnswer: "przyjaciołom"
 
   # Miejscownik
-  - id: 5
-    question: "Często opowiadam mamie o moich ________."
+  - question: "Często opowiadam mamie o moich ________."
     type: multiple-choice
     options:
       - "przyjaciołach"
@@ -58,8 +53,7 @@ questions:
     correctAnswer: "przyjaciołach"
 
   # Biernik
-  - id: 6
-    question: "Zaprosiłem na urodziny wszystkich moich ________."
+  - question: "Zaprosiłem na urodziny wszystkich moich ________."
     type: multiple-choice
     options:
       - "przyjaciół"
@@ -69,8 +63,7 @@ questions:
     correctAnswer: "przyjaciół"
 
   # Narzędnik
-  - id: 7
-    question: "Lubię spędzać czas między ________."
+  - question: "Lubię spędzać czas między ________."
     type: multiple-choice
     options:
       - "przyjaciółmi"
@@ -80,8 +73,7 @@ questions:
     correctAnswer: "przyjaciółmi"
 
   # Dopełniacz
-  - id: 8
-    question: "Mamy wspólnych ________."
+  - question: "Mamy wspólnych ________."
     type: multiple-choice
     options:
       - "przyjaciół"

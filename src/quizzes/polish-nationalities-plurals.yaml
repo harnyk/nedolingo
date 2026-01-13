@@ -2,8 +2,7 @@ title: Множественное число польских националь
 slug: polish-nationalities-plurals
 description: Изучите формы множественного числа национальностей на польском языке (męskoosobowy vs niemęskoosobowy)
 questions:
-  - id: 1
-    question: "Китайцы"
+  - question: "Китайцы"
     type: multiple-choice
     options:
       - "Chińczycy"
@@ -12,8 +11,7 @@ questions:
       - "Chińczyki"
     correctAnswer: "Chińczycy"
 
-  - id: 2
-    question: "Китаянки"
+  - question: "Китаянки"
     type: multiple-choice
     options:
       - "Chinki"
@@ -22,8 +20,7 @@ questions:
       - "Chińczyczki"
     correctAnswer: "Chinki"
 
-  - id: 3
-    question: "Итальянцы"
+  - question: "Итальянцы"
     type: multiple-choice
     options:
       - "Włosi"
@@ -32,8 +29,7 @@ questions:
       - "Italianie"
     correctAnswer: "Włosi"
 
-  - id: 4
-    question: "Итальянки"
+  - question: "Итальянки"
     type: multiple-choice
     options:
       - "Włoszki"
@@ -42,8 +38,7 @@ questions:
       - "Italijki"
     correctAnswer: "Włoszki"
 
-  - id: 5
-    question: "Американцы"
+  - question: "Американцы"
     type: multiple-choice
     options:
       - "Amerykanie"
@@ -52,8 +47,7 @@ questions:
       - "Amerykancy"
     correctAnswer: "Amerykanie"
 
-  - id: 6
-    question: "Американки"
+  - question: "Американки"
     type: multiple-choice
     options:
       - "Amerykanki"
@@ -62,8 +56,7 @@ questions:
       - "Ameryczynki"
     correctAnswer: "Amerykanki"
 
-  - id: 7
-    question: "Немцы"
+  - question: "Немцы"
     type: multiple-choice
     options:
       - "Niemcy"
@@ -72,8 +65,7 @@ questions:
       - "Niemczycy"
     correctAnswer: "Niemcy"
 
-  - id: 8
-    question: "Немки"
+  - question: "Немки"
     type: multiple-choice
     options:
       - "Niemki"
@@ -82,8 +74,7 @@ questions:
       - "Niemeczki"
     correctAnswer: "Niemki"
 
-  - id: 9
-    question: "Англичане"
+  - question: "Англичане"
     type: multiple-choice
     options:
       - "Anglicy"
@@ -92,8 +83,7 @@ questions:
       - "Angliny"
     correctAnswer: "Anglicy"
 
-  - id: 10
-    question: "Англичанки"
+  - question: "Англичанки"
     type: multiple-choice
     options:
       - "Angielki"
@@ -102,8 +92,7 @@ questions:
       - "Anglinki"
     correctAnswer: "Angielki"
 
-  - id: 11
-    question: "Финны"
+  - question: "Финны"
     type: multiple-choice
     options:
       - "Finowie"
@@ -112,8 +101,7 @@ questions:
       - "Fińczycy"
     correctAnswer: "Finowie"
 
-  - id: 12
-    question: "Финки"
+  - question: "Финки"
     type: multiple-choice
     options:
       - "Finki"
@@ -122,8 +110,7 @@ questions:
       - "Finlandia"
     correctAnswer: "Finki"
 
-  - id: 13
-    question: "Евреи"
+  - question: "Евреи"
     type: multiple-choice
     options:
       - "Żydzi"
@@ -132,8 +119,7 @@ questions:
       - "Żydzie"
     correctAnswer: "Żydzi"
 
-  - id: 14
-    question: "Еврейки"
+  - question: "Еврейки"
     type: multiple-choice
     options:
       - "Żydówki"
@@ -142,8 +128,7 @@ questions:
       - "Żydzie"
     correctAnswer: "Żydówki"
 
-  - id: 15
-    question: "Турки"
+  - question: "Турки"
     type: multiple-choice
     options:
       - "Turcy"
@@ -152,8 +137,7 @@ questions:
       - "Turczanie"
     correctAnswer: "Turcy"
 
-  - id: 16
-    question: "Турчанки"
+  - question: "Турчанки"
     type: multiple-choice
     options:
       - "Turczynki"
@@ -162,8 +146,7 @@ questions:
       - "Turczanki"
     correctAnswer: "Turczynki"
 
-  - id: 17
-    question: "Венгры"
+  - question: "Венгры"
     type: multiple-choice
     options:
       - "Węgrzy"
@@ -172,8 +155,7 @@ questions:
       - "Węgry"
     correctAnswer: "Węgrzy"
 
-  - id: 18
-    question: "Венгерки"
+  - question: "Венгерки"
     type: multiple-choice
     options:
       - "Węgierki"

@@ -15,9 +15,9 @@ export default function QuizAnswerOptions({
   return (
     <div className="space-y-4 mb-8">
       {exercise.type === 'multiple-choice' ? (
-        exercise.options.map((option, index) => (
+        exercise.options.map((option) => (
           <button
-            key={index}
+            key={option}
             onClick={() => onSelectOption(option)}
             className={`w-full p-4 text-left rounded-lg border-2 transition-all duration-200 ${
               selectedOption === option
