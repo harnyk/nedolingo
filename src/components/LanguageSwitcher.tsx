@@ -11,6 +11,7 @@ export default function LanguageSwitcher() {
         <button
           type="button"
           aria-label="Language"
+          data-testid="language-switcher-trigger"
           className="flex items-center gap-2 bg-white rounded-lg shadow-lg px-3 py-2 text-gray-700 hover:text-gray-900 transition-colors"
         >
           <Languages className="w-5 h-5 text-gray-600" />

@@ -18,6 +18,7 @@ test.describe('Quiz Flow', () => {
     await page.goto('/');
 
     // 2. Switch to Russian to have consistent locale
+    await page.getByTestId('language-switcher-trigger').click();
     await page.getByTestId('language-button-ru').click();
 
     // 3. Verify quiz list is loaded
@@ -146,6 +147,7 @@ test.describe('Quiz Flow', () => {
     await page.goto('/');
 
     // 2. Switch to Russian to have consistent locale
+    await page.getByTestId('language-switcher-trigger').click();
     await page.getByTestId('language-button-ru').click();
 
     // 3. Verify quiz list is loaded
