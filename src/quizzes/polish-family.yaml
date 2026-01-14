@@ -1,0 +1,216 @@
+title: Семья
+slug: polish-family
+description: Семейная лексика на польском языке
+maxQuestions: 20
+questions:
+  - question: "тесть"
+    type: text-input
+    correctAnswer: "teść"
+
+  - question: "свёкор"
+    type: text-input
+    correctAnswer: "teść"
+
+  - question: "тёща"
+    type: text-input
+    correctAnswer: "teściowa"
+
+  - question: "свекровь"
+    type: text-input
+    correctAnswer: "teściowa"
+
+  - question: "родители жены или мужа"
+    type: text-input
+    correctAnswer: "teściowie"
+
+  - question: "отец"
+    type: text-input
+    correctAnswer: "ojciec"
+
+  - question: "папа"
+    type: text-input
+    correctAnswer: "tata"
+
+  - question: "мать"
+    type: text-input
+    correctAnswer: "matka"
+
+  - question: "мама"
+    type: text-input
+    correctAnswer: "mama"
+
+  - question: "сын"
+    type: text-input
+    correctAnswer: "syn"
+
+  - question: "дочь"
+    type: text-input
+    correctAnswer: "córka"
+
+  - question: "дети"
+    type: text-input
+    correctAnswer: "dzieci"
+
+  - question: "брат"
+    type: text-input
+    correctAnswer: "brat"
+
+  - question: "сестра"
+    type: text-input
+    correctAnswer: "siostra"
+
+  - question: "братья и сёстры"
+    type: text-input
+    correctAnswer: "rodzeństwo"
+
+  - question: "муж"
+    type: text-input
+    correctAnswer: "mąż"
+
+  - question: "жена"
+    type: text-input
+    correctAnswer: "żona"
+
+  - question: "дедушка"
+    type: text-input
+    correctAnswer: "dziadek"
+
+  - question: "бабушка"
+    type: text-input
+    correctAnswer: "babcia"
+
+  - question: "дедушка и бабушка"
+    type: text-input
+    correctAnswer: "dziadkowie"
+
+  - question: "внук"
+    type: text-input
+    correctAnswer: "wnuk"
+
+  - question: "внучка"
+    type: text-input
+    correctAnswer: "wnuczka"
+
+  - question: "внуки"
+    type: text-input
+    correctAnswer: "wnuki"
+
+  - question: "дядя"
+    type: text-input
+    correctAnswer: "wujek"
+
+  - question: "тётя"
+    type: text-input
+    correctAnswer: "ciocia"
+
+  - question: "двоюродный брат"
+    type: text-input
+    correctAnswer: "kuzyn"
+
+  - question: "двоюродная сестра"
+    type: text-input
+    correctAnswer: "kuzynka"
+
+  - question: "шурин"
+    type: text-input
+    correctAnswer: "szwagier"
+
+  - question: "деверь"
+    type: text-input
+    correctAnswer: "szwagier"
+
+  - question: "золовка"
+    type: text-input
+    correctAnswer: "szwagierka"
+
+  - question: "зять (муж дочери)"
+    type: text-input
+    correctAnswer: "zięć"
+
+  - question: "сноха (жена сына)"
+    type: text-input
+    correctAnswer: "synowa"
+
+  - question: "родственники"
+    type: text-input
+    correctAnswer: "krewni"
+
+  - question: "семья"
+    type: text-input
+    correctAnswer: "rodzina"
+
+  - question: "близкие"
+    type: text-input
+    correctAnswer: "bliscy"
+
+  - question: "родство"
+    type: text-input
+    correctAnswer: "pokrewieństwo"
+
+  - question: "прадедушка"
+    type: text-input
+    correctAnswer: "pradziadek"
+
+  - question: "прабабушка"
+    type: text-input
+    correctAnswer: "prababcia"
+
+  - question: "прародители"
+    type: text-input
+    correctAnswer: "pradziadkowie"
+
+  - question: "пасынок"
+    type: text-input
+    correctAnswer: "pasierb"
+
+  - question: "падчерица"
+    type: text-input
+    correctAnswer: "pasierbica"
+
+  - question: "отчим"
+    type: text-input
+    correctAnswer: "ojczym"
+
+  - question: "мачеха"
+    type: text-input
+    correctAnswer: "macocha"
+
+  - question: "крёстный сын"
+    type: text-input
+    correctAnswer: "chrześniak"
+
+  - question: "крёстная дочь"
+    type: text-input
+    correctAnswer: "chrześnica"
+
+  - question: "жених"
+    type: text-input
+    correctAnswer: "narzeczony"
+
+  - question: "невеста"
+    type: text-input
+    correctAnswer: "narzeczona"
+
+  - question: "помолвка"
+    type: text-input
+    correctAnswer: "zaręczyny"
+
+  - question: "вдова"
+    type: text-input
+    correctAnswer: "wdowa"
+
+  - question: "вдовец"
+    type: text-input
+    correctAnswer: "wdowiec"
+
+  - question: "родственник"
+    type: text-input
+    correctAnswer: "krewny"
+
+  - question: "родственница"
+    type: text-input
+    correctAnswer: "krewna"
+
+  - question: "родственники"
+    type: text-input
+    correctAnswer: "krewni"
