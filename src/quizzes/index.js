@@ -5,6 +5,7 @@ import polishNationalitiesYaml from './polish-nationalities.yaml?raw';
 import polishNationalitiesPluralsYaml from './polish-nationalities-plurals.yaml?raw';
 import polishPrzyjacieleCasesYaml from './polish-przyjaciele-cases.yaml?raw';
 import polishFamilyYaml from './polish-family.yaml?raw';
+import polishOdczasownikoweRzeczownikiYaml from './polish-odczasownikowe-rzeczowniki.yaml?raw';
 
 // Parse YAML files
 const quizzes = [
@@ -12,6 +13,7 @@ const quizzes = [
   yaml.load(polishNationalitiesPluralsYaml),
   yaml.load(polishPrzyjacieleCasesYaml),
   yaml.load(polishFamilyYaml),
+  yaml.load(polishOdczasownikoweRzeczownikiYaml),
 ];
 
 // Create a map for quick access by slug

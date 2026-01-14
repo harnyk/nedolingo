@@ -1,0 +1,308 @@
+title: Odczasownikowe rzeczowniki
+slug: polish-odczasownikowe-rzeczowniki
+description: Rzeczowniki odczasownikowe w języku polskim
+maxQuestions: 20
+questions:
+  - question: "analizować"
+    type: text-input
+    correctAnswer: "analizowanie"
+
+  - question: "badać"
+    type: text-input
+    correctAnswer: "badanie"
+
+  - question: "bić"
+    type: text-input
+    correctAnswer: "bicie"
+
+  - question: "biegać"
+    type: text-input
+    correctAnswer: "bieganie"
+
+  - question: "brać"
+    type: text-input
+    correctAnswer: "branie"
+
+  - question: "budować"
+    type: text-input
+    correctAnswer: "budowanie"
+
+  - question: "być"
+    type: text-input
+    correctAnswer: "bycie"
+
+  - question: "cofnąć"
+    type: text-input
+    correctAnswer: "cofnięcie"
+
+  - question: "ćwiczyć"
+    type: text-input
+    correctAnswer: "ćwiczenie"
+
+  - question: "czyścić"
+    type: text-input
+    correctAnswer: "czyszczenie"
+
+  - question: "czytać"
+    type: text-input
+    correctAnswer: "czytanie"
+
+  - question: "dać"
+    type: text-input
+    correctAnswer: "danie"
+
+  - question: "decydować"
+    type: text-input
+    correctAnswer: "decydowanie"
+
+  - question: "gotować"
+    type: text-input
+    correctAnswer: "gotowanie"
+
+  - question: "jeść"
+    type: text-input
+    correctAnswer: "jedzenie"
+
+  - question: "jeździć"
+    type: text-input
+    correctAnswer: "jeżdżenie"
+
+  - question: "koncentrować się"
+    type: text-input
+    correctAnswer: "koncentrowanie się"
+
+  - question: "kończyć"
+    type: text-input
+    correctAnswer: "kończenie"
+
+  - question: "kontrolować"
+    type: text-input
+    correctAnswer: "kontrolowanie"
+
+  - question: "kryć"
+    type: text-input
+    correctAnswer: "krycie"
+
+  - question: "kupować"
+    type: text-input
+    correctAnswer: "kupowanie"
+
+  - question: "lać"
+    type: text-input
+    correctAnswer: "lanie"
+
+  - question: "łączyć"
+    type: text-input
+    correctAnswer: "łączenie"
+
+  - question: "leczyć"
+    type: text-input
+    correctAnswer: "leczenie"
+
+  - question: "mówić"
+    type: text-input
+    correctAnswer: "mówienie"
+
+  - question: "myć"
+    type: text-input
+    correctAnswer: "mycie"
+
+  - question: "myśleć"
+    type: text-input
+    correctAnswer: "myślenie"
+
+  - question: "negocjować"
+    type: text-input
+    correctAnswer: "negocjowanie"
+
+  - question: "niszczyć"
+    type: text-input
+    correctAnswer: "niszczenie"
+
+  - question: "odkrywać"
+    type: text-input
+    correctAnswer: "odkrywanie"
+
+  - question: "odpoczywać"
+    type: text-input
+    correctAnswer: "odpoczywanie"
+
+  - question: "odrzucić"
+    type: text-input
+    correctAnswer: "odrzucenie"
+
+  - question: "oglądać"
+    type: text-input
+    correctAnswer: "oglądanie"
+
+  - question: "organizować"
+    type: text-input
+    correctAnswer: "organizowanie"
+
+  - question: "osiągać"
+    type: text-input
+    correctAnswer: "osiąganie"
+
+  - question: "otworzyć"
+    type: text-input
+    correctAnswer: "otworzenie"
+
+  - question: "palić"
+    type: text-input
+    correctAnswer: "palenie"
+
+  - question: "pić"
+    type: text-input
+    correctAnswer: "picie"
+
+  - question: "pisać"
+    type: text-input
+    correctAnswer: "pisanie"
+
+  - question: "planować"
+    type: text-input
+    correctAnswer: "planowanie"
+
+  - question: "podróżować"
+    type: text-input
+    correctAnswer: "podróżowanie"
+
+  - question: "połączyć"
+    type: text-input
+    correctAnswer: "połączenie"
+
+  - question: "poprawiać"
+    type: text-input
+    correctAnswer: "poprawianie"
+
+  - question: "porównywać"
+    type: text-input
+    correctAnswer: "porównywanie"
+
+  - question: "pracować"
+    type: text-input
+    correctAnswer: "pracowanie"
+
+  - question: "prowadzić"
+    type: text-input
+    correctAnswer: "prowadzenie"
+
+  - question: "przeżyć"
+    type: text-input
+    correctAnswer: "przeżycie"
+
+  - question: "przygotowywać się"
+    type: text-input
+    correctAnswer: "przygotowywanie się"
+
+  - question: "przyjąć"
+    type: text-input
+    correctAnswer: "przyjęcie"
+
+  - question: "robić"
+    type: text-input
+    correctAnswer: "robienie"
+
+  - question: "rozwiązywać"
+    type: text-input
+    correctAnswer: "rozwiązywanie"
+
+  - question: "rozwijać"
+    type: text-input
+    correctAnswer: "rozwijanie"
+
+  - question: "skupiać się"
+    type: text-input
+    correctAnswer: "skupianie się"
+
+  - question: "słuchać"
+    type: text-input
+    correctAnswer: "słuchanie"
+
+  - question: "spełnić"
+    type: text-input
+    correctAnswer: "spełnienie"
+
+  - question: "spotkać"
+    type: text-input
+    correctAnswer: "spotkanie"
+
+  - question: "spotykać się"
+    type: text-input
+    correctAnswer: "spotykanie się"
+
+  - question: "sprzątać"
+    type: text-input
+    correctAnswer: "sprzątanie"
+
+  - question: "sprzedawać"
+    type: text-input
+    correctAnswer: "sprzedawanie"
+
+  - question: "szyć"
+    type: text-input
+    correctAnswer: "szycie"
+
+  - question: "tłumaczyć"
+    type: text-input
+    correctAnswer: "tłumaczenie"
+
+  - question: "tworzyć"
+    type: text-input
+    correctAnswer: "tworzenie"
+
+  - question: "uczestniczyć"
+    type: text-input
+    correctAnswer: "uczestniczenie"
+
+  - question: "uczyć się"
+    type: text-input
+    correctAnswer: "uczenie się"
+
+  - question: "użyć"
+    type: text-input
+    correctAnswer: "użycie"
+
+  - question: "wybierać"
+    type: text-input
+    correctAnswer: "wybieranie"
+
+  - question: "zabić"
+    type: text-input
+    correctAnswer: "zabicie"
+
+  - question: "zaczynać"
+    type: text-input
+    correctAnswer: "zaczynanie"
+
+  - question: "zamknąć"
+    type: text-input
+    correctAnswer: "zamknięcie"
+
+  - question: "zapewnić"
+    type: text-input
+    correctAnswer: "zapewnienie"
+
+  - question: "zapraszać"
+    type: text-input
+    correctAnswer: "zapraszanie"
+
+  - question: "zarządzać"
+    type: text-input
+    correctAnswer: "zarządzanie"
+
+  - question: "zastanawiać się"
+    type: text-input
+    correctAnswer: "zastanawianie się"
+
+  - question: "znać"
+    type: text-input
+    correctAnswer: "znanie"
+
+  - question: "zniszczyć"
+    type: text-input
+    correctAnswer: "zniszczenie"
+
+  - question: "żyć"
+    type: text-input
+    correctAnswer: "życie"
