@@ -5,327 +5,407 @@ maxQuestions: 20
 questions:
   # DOPEŁNIACZ (kogo? czego?)
   - question: "Nie ma ____ (ja) w domu."
-    type: text-input
+    type: multiple-choice
+    options: ["mnie", "mi", "mną", "ja"]
     correctAnswer: "mnie"
 
-  - question: "Bez ____ (ja) to się nie uda."
-    type: text-input
+  - question: "Beze ____ (ja) to się nie uda."
+    type: multiple-choice
+    options: ["mnie", "mi", "mną", "ja"]
     correctAnswer: "mnie"
 
   - question: "Nie ma ____ (ty) dziś w pracy."
-    type: text-input
+    type: multiple-choice
+    options: ["ciebie", "ci", "tobą", "tobie"]
     correctAnswer: "ciebie"
 
   - question: "Nie widzę ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["go", "mu", "niego", "jego"]
     correctAnswer: "go"
 
   - question: "Nie było ____ (ona) na spotkaniu."
-    type: text-input
+    type: multiple-choice
+    options: ["jej", "ją", "nią", "niej"]
     correctAnswer: "jej"
 
   - question: "Nie ma ____ (ona) w biurze."
-    type: text-input
+    type: multiple-choice
+    options: ["jej", "ją", "nią", "niej"]
     correctAnswer: "jej"
 
   - question: "Nie znaleźli ____ (ono)."
-    type: text-input
+    type: multiple-choice
+    options: ["go", "je", "mu", "nim"]
     correctAnswer: "go"
 
   - question: "Nie było ____ (my) na liście."
-    type: text-input
+    type: multiple-choice
+    options: ["nas", "nam", "nami", "my"]
     correctAnswer: "nas"
 
   - question: "Bez ____ (my) projekt nie ruszy."
-    type: text-input
+    type: multiple-choice
+    options: ["nas", "nam", "nami", "my"]
     correctAnswer: "nas"
 
   - question: "Nie ma ____ (wy) w systemie."
-    type: text-input
+    type: multiple-choice
+    options: ["was", "wam", "wami", "wy"]
     correctAnswer: "was"
 
   - question: "Nie znam ____ (oni)."
-    type: text-input
+    type: multiple-choice
+    options: ["ich", "im", "nimi", "nich"]
     correctAnswer: "ich"
 
   - question: "Nie było ____ (oni) w szkole."
-    type: text-input
+    type: multiple-choice
+    options: ["ich", "im", "nimi", "nich"]
     correctAnswer: "ich"
 
   - question: "Nie znam ____ (one)."
-    type: text-input
+    type: multiple-choice
+    options: ["ich", "je", "im", "nich"]
     correctAnswer: "ich"
 
   # CELOWNIK (komu? czemu?)
   - question: "Pomóż ____ (ja), proszę."
-    type: text-input
+    type: multiple-choice
+    options: ["mi", "mnie", "mną", "ja"]
     correctAnswer: "mi"
 
   - question: "To bardzo pomoże ____ (ja)."
-    type: text-input
+    type: multiple-choice
+    options: ["mi", "mnie", "mną", "ja"]
     correctAnswer: "mi"
 
   - question: "Powiem ____ (ty) prawdę."
-    type: text-input
+    type: multiple-choice
+    options: ["ci", "cię", "ciebie", "tobą"]
     correctAnswer: "ci"
 
   - question: "Przyglądam się ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["mu", "go", "nim", "jego"]
     correctAnswer: "mu"
 
   - question: "Daj ____ (on) chwilę."
-    type: text-input
+    type: multiple-choice
+    options: ["mu", "go", "nim", "niego"]
     correctAnswer: "mu"
 
   - question: "Pomagam ____ (ona)."
-    type: text-input
+    type: multiple-choice
+    options: ["jej", "ją", "nią", "niej"]
     correctAnswer: "jej"
 
   - question: "Zaufaj ____ (ona)."
-    type: text-input
+    type: multiple-choice
+    options: ["jej", "ją", "nią", "niej"]
     correctAnswer: "jej"
 
   - question: "Przyglądam się ____ (on) uważnie."
-    type: text-input
+    type: multiple-choice
+    options: ["mu", "go", "nim", "jego"]
     correctAnswer: "mu"
 
   - question: "Pomóż ____ (my)."
-    type: text-input
+    type: multiple-choice
+    options: ["nam", "nas", "nami", "my"]
     correctAnswer: "nam"
 
   - question: "To bardzo pomoże ____ (my)."
-    type: text-input
+    type: multiple-choice
+    options: ["nam", "nas", "nami", "my"]
     correctAnswer: "nam"
 
   - question: "Dziękujemy ____ (wy)."
-    type: text-input
+    type: multiple-choice
+    options: ["wam", "was", "wami", "wy"]
     correctAnswer: "wam"
 
   - question: "Dam ____ (wy) znać."
-    type: text-input
+    type: multiple-choice
+    options: ["wam", "was", "wami", "wy"]
     correctAnswer: "wam"
 
   - question: "Pomagam ____ (oni)."
-    type: text-input
+    type: multiple-choice
+    options: ["im", "ich", "nimi", "nich"]
     correctAnswer: "im"
 
   - question: "Przyglądam się ____ (one)."
-    type: text-input
+    type: multiple-choice
+    options: ["im", "je", "nich", "nimi"]
     correctAnswer: "im"
 
   # BIERNIK (kogo? co?)
   - question: "Czy widzisz ____ (ja)?"
-    type: text-input
+    type: multiple-choice
+    options: ["mnie", "mi", "mną", "ja"]
     correctAnswer: "mnie"
 
   - question: "Czy spotkałeś ____ (ja) wczoraj?"
-    type: text-input
+    type: multiple-choice
+    options: ["mnie", "mi", "mną", "ja"]
     correctAnswer: "mnie"
 
   - question: "Słyszę ____ (ty)."
-    type: text-input
+    type: multiple-choice
+    options: ["cię", "ci", "ciebie", "tobą"]
     correctAnswer: "cię"
 
   - question: "Znalazłem ____ (ty) w tłumie."
-    type: text-input
+    type: multiple-choice
+    options: ["cię", "ci", "tobie", "tobą"]
     correctAnswer: "cię"
 
   - question: "Widzę ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["go", "mu", "nim", "jego"]
     correctAnswer: "go"
 
   - question: "Znam ____ (on) dobrze."
-    type: text-input
+    type: multiple-choice
+    options: ["go", "mu", "nim", "niego"]
     correctAnswer: "go"
 
   - question: "Czekam na ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["niego", "go", "nim", "mu"]
     correctAnswer: "niego"
 
   - question: "Widzę ____ (ona)."
-    type: text-input
+    type: multiple-choice
+    options: ["ją", "jej", "nią", "niej"]
     correctAnswer: "ją"
 
   - question: "Czekam na ____ (ona)."
-    type: text-input
+    type: multiple-choice
+    options: ["nią", "ją", "jej", "niej"]
     correctAnswer: "nią"
 
   - question: "Znalazłem ____ (ono)."
-    type: text-input
+    type: multiple-choice
+    options: ["je", "go", "mu", "nim"]
     correctAnswer: "je"
 
   - question: "Widzę ____ (my)."
-    type: text-input
+    type: multiple-choice
+    options: ["nas", "nam", "nami", "my"]
     correctAnswer: "nas"
 
   - question: "Zaprosili ____ (my)."
-    type: text-input
+    type: multiple-choice
+    options: ["nas", "nam", "nami", "my"]
     correctAnswer: "nas"
 
   - question: "Widzę ____ (wy)."
-    type: text-input
+    type: multiple-choice
+    options: ["was", "wam", "wami", "wy"]
     correctAnswer: "was"
 
   - question: "Zapraszam ____ (wy)."
-    type: text-input
+    type: multiple-choice
+    options: ["was", "wam", "wami", "wy"]
     correctAnswer: "was"
 
   - question: "Widzę ____ (oni)."
-    type: text-input
+    type: multiple-choice
+    options: ["ich", "im", "nimi", "nich"]
     correctAnswer: "ich"
 
   - question: "Spotkałem ____ (oni) w mieście."
-    type: text-input
+    type: multiple-choice
+    options: ["ich", "im", "nimi", "nich"]
     correctAnswer: "ich"
 
   - question: "Znalazłem ____ (one)."
-    type: text-input
+    type: multiple-choice
+    options: ["je", "ich", "im", "nich"]
     correctAnswer: "je"
 
   # NARZĘDNIK (z kim? z czym?)
   - question: "Idziesz ze ____ (ja)?"
-    type: text-input
+    type: multiple-choice
+    options: ["mną", "mnie", "mi", "ja"]
     correctAnswer: "mną"
 
   - question: "Idę z ____ (ty)."
-    type: text-input
+    type: multiple-choice
+    options: ["tobą", "tobie", "ciebie", "ci"]
     correctAnswer: "tobą"
 
   - question: "Rozmawiam z ____ (ty) często."
-    type: text-input
+    type: multiple-choice
+    options: ["tobą", "tobie", "cię", "ciebie"]
     correctAnswer: "tobą"
 
   - question: "Pracuję z ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["nim", "niego", "mu", "go"]
     correctAnswer: "nim"
 
   - question: "Idę z ____ (on) do kina."
-    type: text-input
+    type: multiple-choice
+    options: ["nim", "niego", "mu", "jego"]
     correctAnswer: "nim"
 
   - question: "Rozmawiam z ____ (ona)."
-    type: text-input
+    type: multiple-choice
+    options: ["nią", "niej", "jej", "ją"]
     correctAnswer: "nią"
 
   - question: "Idę z ____ (ona) na spacer."
-    type: text-input
+    type: multiple-choice
+    options: ["nią", "niej", "jej", "ją"]
     correctAnswer: "nią"
 
   - question: "Rozmawiam z ____ (wy)."
-    type: text-input
+    type: multiple-choice
+    options: ["wami", "was", "wam", "wy"]
     correctAnswer: "wami"
 
   - question: "Spotykam się z ____ (oni)."
-    type: text-input
+    type: multiple-choice
+    options: ["nimi", "nich", "ich", "im"]
     correctAnswer: "nimi"
 
   - question: "Pracuję z ____ (one)."
-    type: text-input
+    type: multiple-choice
+    options: ["nimi", "nich", "je", "im"]
     correctAnswer: "nimi"
 
   # MIEJSCOWNIK (o kim? o czym?)
   - question: "Myślę o ____ (ja)."
-    type: text-input
+    type: multiple-choice
+    options: ["mnie", "mi", "mną", "ja"]
     correctAnswer: "mnie"
 
   - question: "Mówimy o ____ (ja) często."
-    type: text-input
+    type: multiple-choice
+    options: ["mnie", "mi", "mną", "ja"]
     correctAnswer: "mnie"
 
   - question: "Rozmawiamy o ____ (ty)."
-    type: text-input
+    type: multiple-choice
+    options: ["tobie", "tobą", "ciebie", "ci"]
     correctAnswer: "tobie"
 
   - question: "Myślę o ____ (ty) codziennie."
-    type: text-input
+    type: multiple-choice
+    options: ["tobie", "tobą", "cię", "ciebie"]
     correctAnswer: "tobie"
 
   - question: "Myślę o ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["nim", "niego", "mu", "go"]
     correctAnswer: "nim"
 
   - question: "Rozmawiamy o ____ (on) w pracy."
-    type: text-input
+    type: multiple-choice
+    options: ["nim", "niego", "jego", "mu"]
     correctAnswer: "nim"
 
   - question: "Mówimy o ____ (ona)."
-    type: text-input
+    type: multiple-choice
+    options: ["niej", "nią", "jej", "ją"]
     correctAnswer: "niej"
 
   - question: "Myślę o ____ (ona) często."
-    type: text-input
+    type: multiple-choice
+    options: ["niej", "nią", "jej", "ją"]
     correctAnswer: "niej"
 
   - question: "Rozmawiamy o ____ (my)."
-    type: text-input
+    type: multiple-choice
+    options: ["nas", "nam", "nami", "my"]
     correctAnswer: "nas"
 
   - question: "Mówimy o ____ (wy)."
-    type: text-input
+    type: multiple-choice
+    options: ["was", "wam", "wami", "wy"]
     correctAnswer: "was"
 
   - question: "Myślę o ____ (oni)."
-    type: text-input
+    type: multiple-choice
+    options: ["nich", "nimi", "ich", "im"]
     correctAnswer: "nich"
 
   - question: "Rozmawiamy o ____ (one)."
-    type: text-input
+    type: multiple-choice
+    options: ["nich", "nimi", "je", "im"]
     correctAnswer: "nich"
 
   # Krótkie vs długie formy
   - question: "Nie widzę ____ (on) dzisiaj."
-    type: text-input
+    type: multiple-choice
+    options: ["go", "niego", "mu", "nim"]
     correctAnswer: "go"
 
   - question: "Zależy mi na ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["nim", "niego", "go", "mu"]
     correctAnswer: "nim"
 
   - question: "Nie mogę bez ____ (ty)."
-    type: text-input
+    type: multiple-choice
+    options: ["ciebie", "cię", "tobie", "tobą"]
     correctAnswer: "ciebie"
 
   - question: "Nie mogę bez ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["niego", "go", "nim", "mu"]
     correctAnswer: "niego"
 
   # Mieszane
   - question: "Dam ____ (on) klucz."
-    type: text-input
+    type: multiple-choice
+    options: ["mu", "go", "niego", "nim"]
     correctAnswer: "mu"
 
   - question: "Oddaj to ____ (ona)."
-    type: text-input
+    type: multiple-choice
+    options: ["jej", "ją", "nią", "niej"]
     correctAnswer: "jej"
 
   - question: "Zrób to dla ____ (my)."
-    type: text-input
+    type: multiple-choice
+    options: ["nas", "nam", "nami", "my"]
     correctAnswer: "nas"
 
   - question: "Idę bez ____ (wy)."
-    type: text-input
+    type: multiple-choice
+    options: ["was", "wam", "wami", "wy"]
     correctAnswer: "was"
 
   - question: "Rozmawiam o ____ (oni)."
-    type: text-input
+    type: multiple-choice
+    options: ["nich", "nimi", "ich", "im"]
     correctAnswer: "nich"
 
   - question: "Spotkaj się z ____ (one)."
-    type: text-input
+    type: multiple-choice
+    options: ["nimi", "nich", "je", "im"]
     correctAnswer: "nimi"
 
   - question: "Zadzwoń do ____ (ja)."
-    type: text-input
+    type: multiple-choice
+    options: ["mnie", "mi", "mną", "ja"]
     correctAnswer: "mnie"
 
   - question: "Czekamy na ____ (wy)."
-    type: text-input
+    type: multiple-choice
+    options: ["was", "wam", "wami", "wy"]
     correctAnswer: "was"
 
   - question: "Pomysł należy do ____ (on)."
-    type: text-input
+    type: multiple-choice
+    options: ["niego", "go", "nim", "mu"]
     correctAnswer: "niego"
 
   - question: "To zależy od ____ (ja)."
-    type: text-input
+    type: multiple-choice
+    options: ["mnie", "mi", "mną", "ja"]
     correctAnswer: "mnie"
