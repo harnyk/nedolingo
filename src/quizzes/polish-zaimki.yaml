@@ -6,12 +6,12 @@ questions:
   # DOPEŁNIACZ (kogo? czego?)
   - question: "Nie ma ____ (ja) w domu."
     type: multiple-choice
-    options: ["mnie", "mi", "mną", "ja"]
+    options: ["mnie", "mi", "mną", "mię"]
     correctAnswer: "mnie"
 
   - question: "Beze ____ (ja) to się nie uda."
     type: multiple-choice
-    options: ["mnie", "mi", "mną", "ja"]
+    options: ["mnie", "mi", "mną", "mię"]
     correctAnswer: "mnie"
 
   - question: "Nie ma ____ (ty) dziś w pracy."
@@ -41,17 +41,17 @@ questions:
 
   - question: "Nie było ____ (my) na liście."
     type: multiple-choice
-    options: ["nas", "nam", "nami", "my"]
+    options: ["nas", "nam", "nami", "was"]
     correctAnswer: "nas"
 
   - question: "Bez ____ (my) projekt nie ruszy."
     type: multiple-choice
-    options: ["nas", "nam", "nami", "my"]
+    options: ["nas", "nam", "nami", "was"]
     correctAnswer: "nas"
 
   - question: "Nie ma ____ (wy) w systemie."
     type: multiple-choice
-    options: ["was", "wam", "wami", "wy"]
+    options: ["was", "wam", "wami", "nas"]
     correctAnswer: "was"
 
   - question: "Nie znam ____ (oni)."
@@ -72,12 +72,12 @@ questions:
   # CELOWNIK (komu? czemu?)
   - question: "Pomóż ____ (ja), proszę."
     type: multiple-choice
-    options: ["mi", "mnie", "mną", "ja"]
+    options: ["mi", "mnie", "mną", "mię"]
     correctAnswer: "mi"
 
   - question: "To bardzo pomoże ____ (ja)."
     type: multiple-choice
-    options: ["mi", "mnie", "mną", "ja"]
+    options: ["mi", "mnie", "mną", "mię"]
     correctAnswer: "mi"
 
   - question: "Powiem ____ (ty) prawdę."
@@ -112,22 +112,22 @@ questions:
 
   - question: "Pomóż ____ (my)."
     type: multiple-choice
-    options: ["nam", "nas", "nami", "my"]
+    options: ["nam", "nas", "nami", "wam"]
     correctAnswer: "nam"
 
   - question: "To bardzo pomoże ____ (my)."
     type: multiple-choice
-    options: ["nam", "nas", "nami", "my"]
+    options: ["nam", "nas", "nami", "wam"]
     correctAnswer: "nam"
 
   - question: "Dziękujemy ____ (wy)."
     type: multiple-choice
-    options: ["wam", "was", "wami", "wy"]
+    options: ["wam", "was", "wami", "nam"]
     correctAnswer: "wam"
 
   - question: "Dam ____ (wy) znać."
     type: multiple-choice
-    options: ["wam", "was", "wami", "wy"]
+    options: ["wam", "was", "wami", "nam"]
     correctAnswer: "wam"
 
   - question: "Pomagam ____ (oni)."
@@ -143,12 +143,12 @@ questions:
   # BIERNIK (kogo? co?)
   - question: "Czy widzisz ____ (ja)?"
     type: multiple-choice
-    options: ["mnie", "mi", "mną", "ja"]
+    options: ["mnie", "mi", "mną", "mię"]
     correctAnswer: "mnie"
 
   - question: "Czy spotkałeś ____ (ja) wczoraj?"
     type: multiple-choice
-    options: ["mnie", "mi", "mną", "ja"]
+    options: ["mnie", "mi", "mną", "mię"]
     correctAnswer: "mnie"
 
   - question: "Słyszę ____ (ty)."
@@ -193,22 +193,22 @@ questions:
 
   - question: "Widzę ____ (my)."
     type: multiple-choice
-    options: ["nas", "nam", "nami", "my"]
+    options: ["nas", "nam", "nami", "was"]
     correctAnswer: "nas"
 
   - question: "Zaprosili ____ (my)."
     type: multiple-choice
-    options: ["nas", "nam", "nami", "my"]
+    options: ["nas", "nam", "nami", "was"]
     correctAnswer: "nas"
 
   - question: "Widzę ____ (wy)."
     type: multiple-choice
-    options: ["was", "wam", "wami", "wy"]
+    options: ["was", "wam", "wami", "nas"]
     correctAnswer: "was"
 
   - question: "Zapraszam ____ (wy)."
     type: multiple-choice
-    options: ["was", "wam", "wami", "wy"]
+    options: ["was", "wam", "wami", "nas"]
     correctAnswer: "was"
 
   - question: "Widzę ____ (oni)."
@@ -229,7 +229,7 @@ questions:
   # NARZĘDNIK (z kim? z czym?)
   - question: "Idziesz ze ____ (ja)?"
     type: multiple-choice
-    options: ["mną", "mnie", "mi", "ja"]
+    options: ["mną", "mnie", "mi", "mię"]
     correctAnswer: "mną"
 
   - question: "Idę z ____ (ty)."
@@ -264,7 +264,7 @@ questions:
 
   - question: "Rozmawiam z ____ (wy)."
     type: multiple-choice
-    options: ["wami", "was", "wam", "wy"]
+    options: ["wami", "was", "wam", "nami"]
     correctAnswer: "wami"
 
   - question: "Spotykam się z ____ (oni)."
@@ -280,12 +280,12 @@ questions:
   # MIEJSCOWNIK (o kim? o czym?)
   - question: "Myślę o ____ (ja)."
     type: multiple-choice
-    options: ["mnie", "mi", "mną", "ja"]
+    options: ["mnie", "mi", "mną", "mię"]
     correctAnswer: "mnie"
 
   - question: "Mówimy o ____ (ja) często."
     type: multiple-choice
-    options: ["mnie", "mi", "mną", "ja"]
+    options: ["mnie", "mi", "mną", "mię"]
     correctAnswer: "mnie"
 
   - question: "Rozmawiamy o ____ (ty)."
@@ -320,12 +320,12 @@ questions:
 
   - question: "Rozmawiamy o ____ (my)."
     type: multiple-choice
-    options: ["nas", "nam", "nami", "my"]
+    options: ["nas", "nam", "nami", "was"]
     correctAnswer: "nas"
 
   - question: "Mówimy o ____ (wy)."
     type: multiple-choice
-    options: ["was", "wam", "wami", "wy"]
+    options: ["was", "wam", "wami", "nas"]
     correctAnswer: "was"
 
   - question: "Myślę o ____ (oni)."
@@ -372,12 +372,12 @@ questions:
 
   - question: "Zrób to dla ____ (my)."
     type: multiple-choice
-    options: ["nas", "nam", "nami", "my"]
+    options: ["nas", "nam", "nami", "was"]
     correctAnswer: "nas"
 
   - question: "Idę bez ____ (wy)."
     type: multiple-choice
-    options: ["was", "wam", "wami", "wy"]
+    options: ["was", "wam", "wami", "nas"]
     correctAnswer: "was"
 
   - question: "Rozmawiam o ____ (oni)."
@@ -392,12 +392,12 @@ questions:
 
   - question: "Zadzwoń do ____ (ja)."
     type: multiple-choice
-    options: ["mnie", "mi", "mną", "ja"]
+    options: ["mnie", "mi", "mną", "mię"]
     correctAnswer: "mnie"
 
   - question: "Czekamy na ____ (wy)."
     type: multiple-choice
-    options: ["was", "wam", "wami", "wy"]
+    options: ["was", "wam", "wami", "nas"]
     correctAnswer: "was"
 
   - question: "Pomysł należy do ____ (on)."
@@ -407,5 +407,5 @@ questions:
 
   - question: "To zależy od ____ (ja)."
     type: multiple-choice
-    options: ["mnie", "mi", "mną", "ja"]
+    options: ["mnie", "mi", "mną", "mię"]
     correctAnswer: "mnie"
