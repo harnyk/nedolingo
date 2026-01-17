@@ -1,0 +1,331 @@
+title: Польские местоимения
+slug: polish-zaimki
+description: Местоимения в разных падежах польского языка
+maxQuestions: 20
+questions:
+  # DOPEŁNIACZ (kogo? czego?)
+  - question: "Nie ma ____ (ja) w domu."
+    type: text-input
+    correctAnswer: "mnie"
+
+  - question: "Bez ____ (ja) to się nie uda."
+    type: text-input
+    correctAnswer: "mnie"
+
+  - question: "Nie ma ____ (ty) dziś w pracy."
+    type: text-input
+    correctAnswer: "ciebie"
+
+  - question: "Nie widzę ____ (on)."
+    type: text-input
+    correctAnswer: "go"
+
+  - question: "Nie było ____ (ona) na spotkaniu."
+    type: text-input
+    correctAnswer: "jej"
+
+  - question: "Nie ma ____ (ona) w biurze."
+    type: text-input
+    correctAnswer: "jej"
+
+  - question: "Nie znaleźli ____ (ono)."
+    type: text-input
+    correctAnswer: "go"
+
+  - question: "Nie było ____ (my) na liście."
+    type: text-input
+    correctAnswer: "nas"
+
+  - question: "Bez ____ (my) projekt nie ruszy."
+    type: text-input
+    correctAnswer: "nas"
+
+  - question: "Nie ma ____ (wy) w systemie."
+    type: text-input
+    correctAnswer: "was"
+
+  - question: "Nie znam ____ (oni)."
+    type: text-input
+    correctAnswer: "ich"
+
+  - question: "Nie było ____ (oni) w szkole."
+    type: text-input
+    correctAnswer: "ich"
+
+  - question: "Nie znam ____ (one)."
+    type: text-input
+    correctAnswer: "ich"
+
+  # CELOWNIK (komu? czemu?)
+  - question: "Pomóż ____ (ja), proszę."
+    type: text-input
+    correctAnswer: "mi"
+
+  - question: "To bardzo pomoże ____ (ja)."
+    type: text-input
+    correctAnswer: "mi"
+
+  - question: "Powiem ____ (ty) prawdę."
+    type: text-input
+    correctAnswer: "ci"
+
+  - question: "Przyglądam się ____ (on)."
+    type: text-input
+    correctAnswer: "mu"
+
+  - question: "Daj ____ (on) chwilę."
+    type: text-input
+    correctAnswer: "mu"
+
+  - question: "Pomagam ____ (ona)."
+    type: text-input
+    correctAnswer: "jej"
+
+  - question: "Zaufaj ____ (ona)."
+    type: text-input
+    correctAnswer: "jej"
+
+  - question: "Przyglądam się ____ (on) uważnie."
+    type: text-input
+    correctAnswer: "mu"
+
+  - question: "Pomóż ____ (my)."
+    type: text-input
+    correctAnswer: "nam"
+
+  - question: "To bardzo pomoże ____ (my)."
+    type: text-input
+    correctAnswer: "nam"
+
+  - question: "Dziękujemy ____ (wy)."
+    type: text-input
+    correctAnswer: "wam"
+
+  - question: "Dam ____ (wy) znać."
+    type: text-input
+    correctAnswer: "wam"
+
+  - question: "Pomagam ____ (oni)."
+    type: text-input
+    correctAnswer: "im"
+
+  - question: "Przyglądam się ____ (one)."
+    type: text-input
+    correctAnswer: "im"
+
+  # BIERNIK (kogo? co?)
+  - question: "Czy widzisz ____ (ja)?"
+    type: text-input
+    correctAnswer: "mnie"
+
+  - question: "Czy spotkałeś ____ (ja) wczoraj?"
+    type: text-input
+    correctAnswer: "mnie"
+
+  - question: "Słyszę ____ (ty)."
+    type: text-input
+    correctAnswer: "cię"
+
+  - question: "Znalazłem ____ (ty) w tłumie."
+    type: text-input
+    correctAnswer: "cię"
+
+  - question: "Widzę ____ (on)."
+    type: text-input
+    correctAnswer: "go"
+
+  - question: "Znam ____ (on) dobrze."
+    type: text-input
+    correctAnswer: "go"
+
+  - question: "Czekam na ____ (on)."
+    type: text-input
+    correctAnswer: "niego"
+
+  - question: "Widzę ____ (ona)."
+    type: text-input
+    correctAnswer: "ją"
+
+  - question: "Czekam na ____ (ona)."
+    type: text-input
+    correctAnswer: "nią"
+
+  - question: "Znalazłem ____ (ono)."
+    type: text-input
+    correctAnswer: "je"
+
+  - question: "Widzę ____ (my)."
+    type: text-input
+    correctAnswer: "nas"
+
+  - question: "Zaprosili ____ (my)."
+    type: text-input
+    correctAnswer: "nas"
+
+  - question: "Widzę ____ (wy)."
+    type: text-input
+    correctAnswer: "was"
+
+  - question: "Zapraszam ____ (wy)."
+    type: text-input
+    correctAnswer: "was"
+
+  - question: "Widzę ____ (oni)."
+    type: text-input
+    correctAnswer: "ich"
+
+  - question: "Spotkałem ____ (oni) w mieście."
+    type: text-input
+    correctAnswer: "ich"
+
+  - question: "Znalazłem ____ (one)."
+    type: text-input
+    correctAnswer: "je"
+
+  # NARZĘDNIK (z kim? z czym?)
+  - question: "Idziesz ze ____ (ja)?"
+    type: text-input
+    correctAnswer: "mną"
+
+  - question: "Idę z ____ (ty)."
+    type: text-input
+    correctAnswer: "tobą"
+
+  - question: "Rozmawiam z ____ (ty) często."
+    type: text-input
+    correctAnswer: "tobą"
+
+  - question: "Pracuję z ____ (on)."
+    type: text-input
+    correctAnswer: "nim"
+
+  - question: "Idę z ____ (on) do kina."
+    type: text-input
+    correctAnswer: "nim"
+
+  - question: "Rozmawiam z ____ (ona)."
+    type: text-input
+    correctAnswer: "nią"
+
+  - question: "Idę z ____ (ona) na spacer."
+    type: text-input
+    correctAnswer: "nią"
+
+  - question: "Rozmawiam z ____ (wy)."
+    type: text-input
+    correctAnswer: "wami"
+
+  - question: "Spotykam się z ____ (oni)."
+    type: text-input
+    correctAnswer: "nimi"
+
+  - question: "Pracuję z ____ (one)."
+    type: text-input
+    correctAnswer: "nimi"
+
+  # MIEJSCOWNIK (o kim? o czym?)
+  - question: "Myślę o ____ (ja)."
+    type: text-input
+    correctAnswer: "mnie"
+
+  - question: "Mówimy o ____ (ja) często."
+    type: text-input
+    correctAnswer: "mnie"
+
+  - question: "Rozmawiamy o ____ (ty)."
+    type: text-input
+    correctAnswer: "tobie"
+
+  - question: "Myślę o ____ (ty) codziennie."
+    type: text-input
+    correctAnswer: "tobie"
+
+  - question: "Myślę o ____ (on)."
+    type: text-input
+    correctAnswer: "nim"
+
+  - question: "Rozmawiamy o ____ (on) w pracy."
+    type: text-input
+    correctAnswer: "nim"
+
+  - question: "Mówimy o ____ (ona)."
+    type: text-input
+    correctAnswer: "niej"
+
+  - question: "Myślę o ____ (ona) często."
+    type: text-input
+    correctAnswer: "niej"
+
+  - question: "Rozmawiamy o ____ (my)."
+    type: text-input
+    correctAnswer: "nas"
+
+  - question: "Mówimy o ____ (wy)."
+    type: text-input
+    correctAnswer: "was"
+
+  - question: "Myślę o ____ (oni)."
+    type: text-input
+    correctAnswer: "nich"
+
+  - question: "Rozmawiamy o ____ (one)."
+    type: text-input
+    correctAnswer: "nich"
+
+  # Krótkie vs długie formy
+  - question: "Nie widzę ____ (on) dzisiaj."
+    type: text-input
+    correctAnswer: "go"
+
+  - question: "Zależy mi na ____ (on)."
+    type: text-input
+    correctAnswer: "nim"
+
+  - question: "Nie mogę bez ____ (ty)."
+    type: text-input
+    correctAnswer: "ciebie"
+
+  - question: "Nie mogę bez ____ (on)."
+    type: text-input
+    correctAnswer: "niego"
+
+  # Mieszane
+  - question: "Dam ____ (on) klucz."
+    type: text-input
+    correctAnswer: "mu"
+
+  - question: "Oddaj to ____ (ona)."
+    type: text-input
+    correctAnswer: "jej"
+
+  - question: "Zrób to dla ____ (my)."
+    type: text-input
+    correctAnswer: "nas"
+
+  - question: "Idę bez ____ (wy)."
+    type: text-input
+    correctAnswer: "was"
+
+  - question: "Rozmawiam o ____ (oni)."
+    type: text-input
+    correctAnswer: "nich"
+
+  - question: "Spotkaj się z ____ (one)."
+    type: text-input
+    correctAnswer: "nimi"
+
+  - question: "Zadzwoń do ____ (ja)."
+    type: text-input
+    correctAnswer: "mnie"
+
+  - question: "Czekamy na ____ (wy)."
+    type: text-input
+    correctAnswer: "was"
+
+  - question: "Pomysł należy do ____ (on)."
+    type: text-input
+    correctAnswer: "niego"
+
+  - question: "To zależy od ____ (ja)."
+    type: text-input
+    correctAnswer: "mnie"
