@@ -6,10 +6,19 @@
  */
 
 // Core Quiz Domain
-export type { Quiz, Question, QuizzesMap } from './quiz';
+export type {
+  Quiz,
+  Question,
+  MultipleChoiceQuestion,
+  TextInputQuestion,
+  ClozeQuestion,
+  ClozeBlank,
+  ParsedClozeData,
+  QuizzesMap
+} from './quiz';
 
 // Quiz State Domain
-export type { CompletedExercise } from './quiz-state';
+export type { CompletedExercise, ClozeUserAnswer } from './quiz-state';
 
 // Common Types
 export type { TranslationFunction } from './common';

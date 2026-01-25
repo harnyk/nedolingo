@@ -1,5 +1,5 @@
 import { Trophy, ArrowLeft, RotateCcw } from 'lucide-react';
-import type { QuizSummaryProps } from '../../types';
+import type { QuizSummaryProps, CompletedExercise, ClozeUserAnswer, ClozeQuestion } from '../../types';
 
 export default function QuizSummary({
   score,
@@ -27,24 +27,7 @@ export default function QuizSummary({
             <h2 className="text-xl font-semibold text-gray-800 mb-4">{t('results.review_incorrect')}</h2>
             <div className="space-y-4" data-testid="quiz-incorrect-cards-container">
               {incorrectExercises.map((exercise, index) => (
-                <div
-                  key={index}
-                  className="border border-red-200 rounded-lg p-4 bg-red-50"
-                  data-testid="quiz-incorrect-card"
-                >
-                  <p
-                    className="font-medium text-gray-800 mb-2"
-                    data-testid="quiz-incorrect-question"
-                  >
-                    {exercise.question}
-                  </p>
-                  <p className="text-sm text-gray-600 mb-1">
-                    {t('results.your_answer')} <span className="font-medium">{exercise.userAnswer || t('results.no_answer')}</span>
-                  </p>
-                  <p className="text-sm text-green-600 font-medium">
-                    {t('results.correct_answer')} {exercise.correctAnswer}
-                  </p>
-                </div>
+                <IncorrectExerciseCard key={index} exercise={exercise} t={t} />
               ))}
             </div>
           </div>
@@ -67,6 +50,73 @@ export default function QuizSummary({
           </button>
         </div>
       </div>
+    </div>
+  );
+}
+
+interface IncorrectExerciseCardProps {
+  exercise: CompletedExercise;
+  t: QuizSummaryProps['t'];
+}
+
+function IncorrectExerciseCard({ exercise, t }: IncorrectExerciseCardProps) {
+  if (exercise.type === 'cloze') {
+    const clozeAnswer = exercise.userAnswer as ClozeUserAnswer;
+    const { segments, blanks } = (exercise as ClozeQuestion).cloze;
+
+    return (
+      <div
+        className="border border-red-200 rounded-lg p-4 bg-red-50"
+        data-testid="quiz-incorrect-card"
+      >
+        <p className="font-medium text-gray-800 mb-2" data-testid="quiz-incorrect-question">
+          {segments.map((segment, index) => (
+            <span key={index}>
+              {segment}
+              {index < blanks.length && (
+                <span className="inline-block mx-1">
+                  {clozeAnswer.correctness[index] ? (
+                    <span className="px-2 py-0.5 bg-green-100 text-green-700 font-semibold rounded border border-green-300">
+                      {clozeAnswer.answers[index]}
+                    </span>
+                  ) : (
+                    <>
+                      <span className="px-2 py-0.5 bg-red-100 text-red-700 font-semibold rounded border border-red-300 line-through">
+                        {clozeAnswer.answers[index] || '—'}
+                      </span>
+                      {' '}
+                      <span className="px-2 py-0.5 bg-green-100 text-green-700 font-semibold rounded border border-green-300">
+                        {blanks[index].correctAnswer}
+                      </span>
+                    </>
+                  )}
+                </span>
+              )}
+            </span>
+          ))}
+        </p>
+      </div>
+    );
+  }
+
+  // Regular questions (multiple-choice and text-input)
+  return (
+    <div
+      className="border border-red-200 rounded-lg p-4 bg-red-50"
+      data-testid="quiz-incorrect-card"
+    >
+      <p
+        className="font-medium text-gray-800 mb-2"
+        data-testid="quiz-incorrect-question"
+      >
+        {exercise.question}
+      </p>
+      <p className="text-sm text-gray-600 mb-1">
+        {t('results.your_answer')} <span className="font-medium">{(exercise.userAnswer as string) || t('results.no_answer')}</span>
+      </p>
+      <p className="text-sm text-green-600 font-medium">
+        {t('results.correct_answer')} {exercise.correctAnswer}
+      </p>
     </div>
   );
 }

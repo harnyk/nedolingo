@@ -1,5 +1,13 @@
 import type { Question } from '../types';
 
+/**
+ * Gets a unique identifier for a question.
+ * For cloze questions, uses rawText; for others, uses question text.
+ */
+export const getQuestionIdentifier = (question: Question): string => {
+  return question.type === 'cloze' ? question.rawText : question.question;
+};
+
 const shuffleArray = <T,>(array: T[]): T[] => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -16,6 +24,14 @@ const clampLimit = (limit: number | undefined, total: number) => {
   return Math.max(0, Math.min(total, Math.floor(limit)));
 };
 
+const getBalanceKey = (question: Question): string => {
+  // Cloze questions don't have a single correct answer, group them separately
+  if (question.type === 'cloze') {
+    return '__cloze__';
+  }
+  return question.correctAnswer;
+};
+
 const balanceByAnswer = (questions: Question[], limit: number) => {
   if (limit >= questions.length) {
     return questions;
@@ -25,7 +41,7 @@ const balanceByAnswer = (questions: Question[], limit: number) => {
   const groupOrder: string[] = [];
 
   for (const question of questions) {
-    const key = question.correctAnswer;
+    const key = getBalanceKey(question);
     if (!groups.has(key)) {
       groups.set(key, []);
       groupOrder.push(key);
@@ -84,7 +100,7 @@ export const selectQuestions = ({
     for (let attempt = 0; attempt < 5; attempt++) {
       const selection = buildSelection();
       const matchesPrevious = selection.length === previousSet.size
-        && selection.every((question) => previousSet.has(question.question));
+        && selection.every((question) => previousSet.has(getQuestionIdentifier(question)));
       if (!matchesPrevious) {
         return selection;
       }

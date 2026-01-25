@@ -6,7 +6,7 @@
  */
 
 import { Quiz, Question } from './quiz';
-import { CompletedExercise } from './quiz-state';
+import { CompletedExercise, ClozeUserAnswer } from './quiz-state';
 import { TranslationFunction } from './common';
 
 // ============================================================================
@@ -66,8 +66,20 @@ export interface QuizProgressBarProps {
  * Props for the QuizQuestion component
  */
 export interface QuizQuestionProps {
-  /** The question text to display */
-  question: string;
+  /** The current exercise/question */
+  exercise: Question;
+
+  /** Current cloze answers (for cloze questions) */
+  clozeAnswers?: string[];
+
+  /** Callback when a cloze blank answer changes */
+  onClozeAnswerChange?: (index: number, value: string) => void;
+
+  /** Whether to show the result */
+  showResult?: boolean;
+
+  /** Correctness of each cloze blank (for showing results) */
+  clozeBlankResults?: boolean[];
 }
 
 /**
@@ -106,11 +118,14 @@ export interface QuizResultDisplayProps {
   /** Whether the user's answer was correct */
   isCorrect: boolean;
 
-  /** The answer provided by the user */
-  userAnswer: string;
+  /** The answer provided by the user (string for regular, ClozeUserAnswer for cloze) */
+  userAnswer: string | ClozeUserAnswer;
 
-  /** The correct answer */
+  /** The correct answer (not used for cloze) */
   correctAnswer: string;
+
+  /** The current exercise (needed for cloze display) */
+  exercise: Question;
 
   /** Translation function */
   t: TranslationFunction;

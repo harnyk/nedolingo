@@ -1,0 +1,24 @@
+title: Polish Grammar – Cloze Examples
+slug: polish-grammar-cloze
+description: Cloze questions for basic Polish grammar practice
+maxQuestions: 5
+questions:
+  - question:
+      type: cloze
+      text: Wczoraj {iść|+poszedłem|-poszedł|-idę|-pójdę} do sklepu, ponieważ {potrzebować|+potrzebowałem|-potrzebowała|-potrzebował|-potrzebuję} kupić chleba i mleka.
+
+  - question:
+      type: cloze
+      text: Jeśli jutro będzie ładna pogoda, {iść|+pójdziemy|-poszliśmy|-idziemy|-szliśmy} na spacer do parku.
+
+  - question:
+      type: cloze
+      text: Ona {czytać|+czyta|-czytał|-czytają|-czytała} książkę, kiedy ja {gotować|+gotowałem|-gotuję|-gotował|-gotowaliśmy} obiad.
+
+  - question:
+      type: cloze
+      text: Nie {mieć|+mam|-ma|-miałem|-będę miał} czasu, bo muszę {pracować|+pracować|-pracowałem|-pracuję|-praca} do późna.
+
+  - question:
+      type: cloze
+      text: W przyszłym roku {jechać|+pojadę|-jadę|-jechałem|-pojechałem} do Polski, żeby {uczyć się|+uczyć się|-uczę się|-uczyłem się|-nauczę się} języka.

@@ -7,8 +7,9 @@ import QuizQuestion from './QuizQuestion';
 import QuizAnswerOptions from './QuizAnswerOptions';
 import QuizResultDisplay from './QuizResultDisplay';
 import QuizActionButton from './QuizActionButton';
-import type { CompletedExercise, QuizProps } from '../../types';
+import type { CompletedExercise, QuizProps, ClozeUserAnswer } from '../../types';
 import { selectQuestions } from '../../utils/quiz-selection';
+import { shuffleClozeOptions } from '../../utils/cloze-parser';
 
 export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
   const { t } = useI18n();
@@ -17,12 +18,16 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
   const [textInput, setTextInput] = useState('');
   const [showResult, setShowResult] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  const [userAnswerForDisplay, setUserAnswerForDisplay] = useState('');
+  const [userAnswerForDisplay, setUserAnswerForDisplay] = useState<string | ClozeUserAnswer>('');
   const [score, setScore] = useState(0);
   const [completedExercises, setCompletedExercises] = useState<CompletedExercise[]>([]);
   const [showSummary, setShowSummary] = useState(false);
   const [shuffleSeed, setShuffleSeed] = useState(0);
   const lastSelectionRef = useRef<string[] | null>(null);
+
+  // Cloze question state
+  const [clozeAnswers, setClozeAnswers] = useState<string[]>([]);
+  const [clozeBlankResults, setClozeBlankResults] = useState<boolean[]>([]);
 
   // Track dirty state: quiz is dirty if user has answered questions but hasn't finished
   useEffect(() => {
@@ -50,15 +55,24 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
       previousSelection: lastSelectionRef.current
     });
 
-    // Shuffle options for each multiple-choice question unless noShuffle is set
+    // Shuffle options for each question unless noShuffle is set
     questions = questions.map((question) => {
-      if (question.type === 'multiple-choice' && question.options) {
-        const shouldShuffle = !quiz.noShuffle && !question.noShuffle;
+      const shouldShuffle = !quiz.noShuffle && !question.noShuffle;
+
+      if (question.type === 'multiple-choice') {
         return {
           ...question,
           options: shouldShuffle ? shuffleArray(question.options) : question.options
         };
       }
+
+      if (question.type === 'cloze') {
+        return {
+          ...question,
+          cloze: shuffleClozeOptions(question.cloze, shouldShuffle)
+        };
+      }
+
       return question;
     });
 
@@ -71,15 +85,27 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
   };
 
   const checkAnswer = () => {
-    let userAnswer = '';
+    let userAnswer: string | ClozeUserAnswer = '';
     let correct = false;
 
     if (currentExercise.type === 'multiple-choice') {
       userAnswer = selectedOption;
       correct = userAnswer === currentExercise.correctAnswer;
-    } else {
+    } else if (currentExercise.type === 'text-input') {
       userAnswer = textInput;
       correct = normalizeAnswer(userAnswer) === normalizeAnswer(currentExercise.correctAnswer);
+    } else if (currentExercise.type === 'cloze') {
+      // Check each blank in the cloze question
+      const blanks = currentExercise.cloze.blanks;
+      const correctness = blanks.map((blank, index) => clozeAnswers[index] === blank.correctAnswer);
+      correct = correctness.every(Boolean);
+
+      userAnswer = {
+        answers: [...clozeAnswers],
+        correctness
+      };
+
+      setClozeBlankResults(correctness);
     }
 
     setIsCorrect(correct);
@@ -107,16 +133,30 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
     if (currentExerciseIndex < exercises.length - 1) {
       setCurrentExerciseIndex(currentExerciseIndex + 1);
       setShowResult(false);
+      setClozeAnswers([]);
+      setClozeBlankResults([]);
     } else {
       setShowSummary(true);
     }
   };
 
+  const handleClozeAnswerChange = (index: number, value: string) => {
+    setClozeAnswers((prev) => {
+      const newAnswers = [...prev];
+      newAnswers[index] = value;
+      return newAnswers;
+    });
+  };
+
   const resetQuiz = () => {
-    lastSelectionRef.current = exercises.map((exercise) => exercise.question);
+    lastSelectionRef.current = exercises.map((exercise) =>
+      exercise.type === 'cloze' ? exercise.rawText : exercise.question
+    );
     setCurrentExerciseIndex(0);
     setSelectedOption('');
     setTextInput('');
+    setClozeAnswers([]);
+    setClozeBlankResults([]);
     setShowResult(false);
     setIsCorrect(false);
     setUserAnswerForDisplay('');
@@ -161,7 +201,13 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
           t={t}
         />
 
-        <QuizQuestion question={currentExercise.question} />
+        <QuizQuestion
+          exercise={currentExercise}
+          clozeAnswers={clozeAnswers}
+          onClozeAnswerChange={handleClozeAnswerChange}
+          showResult={showResult}
+          clozeBlankResults={clozeBlankResults}
+        />
 
         <QuizAnswerOptions
           exercise={currentExercise}
@@ -178,7 +224,8 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
           <QuizResultDisplay
             isCorrect={isCorrect}
             userAnswer={userAnswerForDisplay}
-            correctAnswer={currentExercise.correctAnswer}
+            correctAnswer={currentExercise.type !== 'cloze' ? currentExercise.correctAnswer : ''}
+            exercise={currentExercise}
             t={t}
           />
         )}
@@ -189,7 +236,12 @@ export default function Quiz({ quiz, onBack, onDirtyStateChange }: QuizProps) {
           disabled={
             currentExercise.type === 'multiple-choice'
               ? !selectedOption
-              : !textInput.trim()
+              : currentExercise.type === 'text-input'
+                ? !textInput.trim()
+                : currentExercise.type === 'cloze'
+                  ? clozeAnswers.length < currentExercise.cloze.blanks.length ||
+                    clozeAnswers.some((a) => !a)
+                  : true
           }
           onCheck={checkAnswer}
           onNext={handleNext}

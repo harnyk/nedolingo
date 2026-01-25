@@ -1,7 +1,11 @@
 import { CheckCircle, XCircle } from 'lucide-react';
 import type { QuizResultDisplayProps } from '../../types';
 
-export default function QuizResultDisplay({ isCorrect, userAnswer, correctAnswer, t }: QuizResultDisplayProps) {
+export default function QuizResultDisplay({ isCorrect, userAnswer, correctAnswer, exercise, t }: QuizResultDisplayProps) {
+  // For cloze questions, results are shown inline in the question component
+  // We only show the correct/incorrect indicator here
+  const isCloze = exercise.type === 'cloze';
+
   return (
     <div className="mb-8">
       <div className="text-center mb-6">
@@ -20,49 +24,52 @@ export default function QuizResultDisplay({ isCorrect, userAnswer, correctAnswer
         </p>
       </div>
 
-      <div className="space-y-3">
-        {/* User's Answer */}
-        <div
-          className={`p-4 rounded-lg border-2 flex items-center gap-3 ${
-            isCorrect
-              ? 'bg-green-50 border-green-300'
-              : 'bg-red-50 border-red-300'
-          }`}
-          data-testid="quiz-user-answer-card"
-        >
-          {isCorrect ? (
-            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
-          ) : (
-            <XCircle className="w-6 h-6 text-red-600 flex-shrink-0" />
-          )}
-          <div className="flex-1">
-            <p className="text-xs text-gray-500 mb-1">{t('results.your_answer')}</p>
-            <p className={`text-xl font-semibold ${
-              isCorrect
-                ? 'text-green-700'
-                : 'text-red-700'
-            }`}>
-              {userAnswer || t('results.no_answer')}
-            </p>
-          </div>
-        </div>
-
-        {/* Correct Answer (only if incorrect) */}
-        {!isCorrect && (
+      {/* For cloze questions, detailed results are shown inline in the question */}
+      {!isCloze && (
+        <div className="space-y-3">
+          {/* User's Answer */}
           <div
-            className="p-4 rounded-lg border-2 bg-green-50 border-green-300 flex items-center gap-3"
-            data-testid="quiz-correct-answer-card"
+            className={`p-4 rounded-lg border-2 flex items-center gap-3 ${
+              isCorrect
+                ? 'bg-green-50 border-green-300'
+                : 'bg-red-50 border-red-300'
+            }`}
+            data-testid="quiz-user-answer-card"
           >
-            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+            {isCorrect ? (
+              <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+            ) : (
+              <XCircle className="w-6 h-6 text-red-600 flex-shrink-0" />
+            )}
             <div className="flex-1">
-              <p className="text-xs text-gray-500 mb-1">{t('results.correct_answer')}</p>
-              <p className="text-xl font-semibold text-green-700">
-                {correctAnswer}
+              <p className="text-xs text-gray-500 mb-1">{t('results.your_answer')}</p>
+              <p className={`text-xl font-semibold ${
+                isCorrect
+                  ? 'text-green-700'
+                  : 'text-red-700'
+              }`}>
+                {(userAnswer as string) || t('results.no_answer')}
               </p>
             </div>
           </div>
-        )}
-      </div>
+
+          {/* Correct Answer (only if incorrect) */}
+          {!isCorrect && (
+            <div
+              className="p-4 rounded-lg border-2 bg-green-50 border-green-300 flex items-center gap-3"
+              data-testid="quiz-correct-answer-card"
+            >
+              <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <div className="flex-1">
+                <p className="text-xs text-gray-500 mb-1">{t('results.correct_answer')}</p>
+                <p className="text-xl font-semibold text-green-700">
+                  {correctAnswer}
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

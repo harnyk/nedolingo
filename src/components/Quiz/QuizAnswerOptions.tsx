@@ -11,7 +11,8 @@ export default function QuizAnswerOptions({
   showResult,
   t
 }: QuizAnswerOptionsProps) {
-  if (showResult) {
+  // For cloze questions, answers are rendered inline in the question
+  if (showResult || exercise.type === 'cloze') {
     return null;
   }
 
