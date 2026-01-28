@@ -21,7 +21,7 @@ export default function QuizClozeQuestion({
   return (
     <div className="mb-8">
       <div
-        className="text-xl leading-relaxed text-gray-800 text-center"
+        className="text-lg leading-relaxed text-gray-800 text-center"
         data-testid="quiz-cloze-question"
       >
         {segments.map((segment, index) => (
@@ -63,7 +63,7 @@ function ClozeBlankSelect({ blank, value, onChange }: ClozeBlankSelectProps) {
       value={value}
       onChange={(e: ChangeEvent<HTMLSelectElement>) => onChange(e.target.value)}
       className={`
-        px-3 py-2 border-2 rounded-lg text-lg
+        px-2 py-1 border-2 rounded-lg text-base
         focus:outline-none focus:border-blue-500
         ${value ? 'border-blue-500 bg-blue-50' : 'border-gray-300 bg-white'}
       `}
